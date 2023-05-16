@@ -1,0 +1,187 @@
+.section-contact {
+  padding-top: 100px;
+  height: 80vh;
+}
+.section-contact .contact-container {
+  width: 90%;
+  margin-left: 10%;
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  margin-right: 0px;
+}
+@media only screen and (max-width: 1300px) {
+  .section-contact .contact-container {
+    flex-direction: column;
+  }
+}
+
+
+.section-contact .contact-container .right-container {
+  height: 40vh;
+  margin-right: 0px;
+}
+
+.section-contact .contact-container .right-container img {
+  height: 45vh;
+  margin-left: 30%;
+  margin-top: 15%;
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+  .section-contact .contact-container .right-container {
+    display: none;
+  }
+}
+
+
+.section-contact .contact-container .left-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  color: #28363d;
+  margin-left: 10%;
+  height: 70vh;
+}
+
+.section-contact .contact-container .left-container .input-special {
+  width: 87%;
+  height: 100%;
+  border-radius: 5px;
+  border-style: solid;
+  margin-bottom: 2vh;
+  margin-top: 0.5vh;
+  padding-left: 3%;
+  line-height: 40px;
+}
+
+.section-contact .contact-container .left-container .header {
+  font-size: 30px;
+  font-family: 'Helvetica';
+  font-weight: bold;
+}
+
+.section-contact .contact-container .left-container .bye {
+  width: 12%;
+  margin-top: -2.3rem;
+  margin-left: 12rem;
+}
+
+.section-contact .contact-container .left-container .input-normal {
+  width: 87%;
+  height: 30%;
+  border-radius: 5px;
+  border-style: solid;
+  margin-bottom: 2vh;
+  margin-top: 0.5vh;
+  padding-left: 3%;
+}
+
+.section-contact .contact-container .left-container .input-normal:focus {
+  outline: none !important;
+  border:1px solid rgb(134, 0, 164);
+}
+
+.section-contact .contact-container .left-container .input-special:focus {
+  outline: none !important;
+  border:1px solid rgb(134, 0, 164);
+}
+
+.section-contact .contact-container .left-container img {
+  font-size: 30px;
+  font-family: 'Helvetica';
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1300px) {
+  .section-contact .contact-container .left-container {
+    width: 90%;
+    margin-left: 0%;
+  }
+}
+.section-contact .contact-container .left-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.section-contact .contact-container .left-container form input {
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  color: #28363d;
+  border: 2px solid #28363d;
+  background-color: #dee1dd;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  padding-left: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.section-contact .contact-container .left-container form textarea {
+  border-radius: 20px;
+  color: #28363d;
+  border: 2px solid #28363d;
+  background-color: #dee1dd;
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.section-contact .contact-container .left-container form button {
+  height: 40px;
+  border-radius: 20px;
+  color: #dee1dd;
+  border: 2px solid #28363d;
+  background-color: #FFFFFF;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.section-contact .contact-container .left-container form span {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.section-contact .contact-container .left-container .contact {
+  margin-top: 30px;
+  color: #28363d;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.input:focus {
+  outline: none !important;
+  border:1px solid red;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .section-contact .contact-container .left-container .contact {
+    font-size: 1em;
+  }
+}
+.section-contact .contact-container .left-container .contact span {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.section-contact .contact-container .left-container .contact img {
+  width: 50px;
+  margin-right: 20px;
+}
+.section-contact .contact-container .left-container .contact a {
+  text-decoration: none;
+  color: #28363d;
+}
+.section-contact .contact-container .left-container .contact a:hover, .section-contact .contact-container .left-container .contact a:focus {
+  color: #2f575d;
+  text-decoration: underline;
+}/*# sourceMappingURL=contact.css.map */

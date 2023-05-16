@@ -1,0 +1,117 @@
+.section-about {
+  height: 70vh;
+  padding-top: 80px;
+}
+
+.section-about .aboutme-container {
+  width: 70%;
+  margin-left: 15%;
+  display: flex; 
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 1300px) {
+  .section-about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-about .aboutme-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.section-about .aboutme-container img {
+  height: 60vh;
+  width: 50vh;
+  border-radius: 20px;
+  margin-top: 50px;
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 15%;
+}
+
+@media only screen and (max-width: 1568px) {
+  .section-about .aboutme-container .graphic {
+    display: none;
+  }
+}
+.section-about .aboutme-container .description {
+  border-radius: 20px;
+  color: #28363d;
+  width: 50%;
+  padding: 7.5rem;
+  margin-left: -10rem;
+}
+@media only screen and (max-width: 1200px) {
+  .section-about {
+    margin-left: 7%;
+    margin-top: -20%;
+    padding-bottom: 40vh;
+  }
+
+  .section-about .aboutme-container .description {
+    width: 100%;
+    margin-left: -15%;
+  }
+}
+.section-about .aboutme-container .description h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  color: purple;
+  
+}
+@media only screen and (max-width: 1300px) {
+  .section-about .aboutme-container .description h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .section-about .aboutme-container .description h2 {
+    margin-top: -10vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-about .aboutme-container .description h2 {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .section-about .aboutme-container .description h2 {
+    font-size: 1.7em;
+  }
+}
+.section-about .aboutme-container .description .text {
+  text-align: justify;
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 1300px) {
+  .section-about .aboutme-container .description .text {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-about .aboutme-container .description .text {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .section-about .aboutme-container .description .text {
+    font-size: 1.2em;
+  }
+}
+.section-about .aboutme-container .description .text img {
+  margin-top: 20px;
+  width: 5rem;
+}
