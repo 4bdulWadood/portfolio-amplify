@@ -23,6 +23,7 @@ import figmaLogo from "../assets/figmaLogo.png";
 import css3Logo from "../assets/css3Logo.png";
 import ReactLogo from "../assets/ReactLogo.png";
 import AWSLogo from "../assets/AWSLogo.png";
+import personalPic from "../assets/personalPic.jpg"
 
 export default function MainPage() {
   const [html, setHtml] = useState("");
@@ -64,12 +65,12 @@ export default function MainPage() {
           <img src={boyGraphic} className="boy" alt="hello icon" />
           <div className="description">
             Hi, I'm Abdul Wadood, A passionate software engineering student and developer based in Toronto, Ontario.
-            <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLocationDot} fontSize={25} color="purple"/>
+            <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLocationDot} fontSize={25} color="#7600AD"/>
           </div>
           <div className="social-box">
-              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faFloppyDisk} fontSize={35} color="purple"/>
-              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faSquareGithub} fontSize={35} color="purple"/>
-              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLinkedin} fontSize={35} color="purple"/>
+              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faFloppyDisk} fontSize={35} color="#7600AD"/>
+              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faSquareGithub} fontSize={35} color="#7600AD"/>
+              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLinkedin} fontSize={35} color="#7600AD"/>
           </div>   
           <div className="tech-stack">
               <text>Tech Stack | </text>
@@ -87,7 +88,7 @@ export default function MainPage() {
             <directionalLight position={(3, 2, 1)} />
             <Blob/>
           </Canvas>
-          <img src={avatar} className="avatar" alt="avatar" />
+          <img src={personalPic} className="avatar" alt="avatar" />
         </div>
       </div>
     </div>

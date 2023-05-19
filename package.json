@@ -1,7 +1,7 @@
 {
   "name": "react-portfolio",
   "version": "0.1.0",
-  "homepage": "https://github.com/4bdulWadood/portfolio-amplify.git",
+  "homepage": "https://github.com/4bdulWadood/dev-portfolio.git",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

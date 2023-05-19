@@ -53,8 +53,7 @@ export default function Project2() {
       <div className="right-container">
         <h1>FoodCrew</h1>
         <div className="description">
-          Collaborated with an interdisciplinary team to tackle food insecurity on campus over and 
-          to provide culturally appropriate and sustainable food to those who need it most.
+          Collaborated with an interdisciplinary team to tackle food insecurity on campus and to work on providing culturally appropriate and sustainable food to those who need it most.
           2nd Place at Science Discovery Zone's Case Competition on Food Security.
         
           <div className="tech-box">

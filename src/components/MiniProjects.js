@@ -37,7 +37,7 @@ export default function MiniProjects() {
         <div className="project-description">
           Posture Classifier
           <a
-            href="https://github.com/4bdulWadood/PostureCorrector"
+            href="https://github.com/4bdulWadood/PostureClassfier-CNN"
             target="_blank"
           >
             <img src={gitIco} className="liveIco" alt="github icon" />

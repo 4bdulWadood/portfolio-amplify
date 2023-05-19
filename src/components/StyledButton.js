@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const ButtonComponent = styled.button`
   width: 20.6vw;
@@ -9,8 +10,14 @@ const ButtonComponent = styled.button`
   font-weight: bold;
   color: white;
   border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 85%;
+  }
 `
 
 export const Button = () => {
-  return <ButtonComponent> Get Started </ButtonComponent>;
+  return <ButtonComponent> <FontAwesomeIcon icon={faArrowRight} fontSize={20} color="white"/> </ButtonComponent>;
 };
