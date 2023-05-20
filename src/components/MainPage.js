@@ -68,9 +68,9 @@ export default function MainPage() {
             <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLocationDot} fontSize={25} color="#7600AD"/>
           </div>
           <div className="social-box">
-              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faFloppyDisk} fontSize={35} color="#7600AD"/>
-              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faSquareGithub} fontSize={35} color="#7600AD"/>
-              <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLinkedin} fontSize={35} color="#7600AD"/>
+              <a href='/resume.pdf'  download><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faFloppyDisk} fontSize={35} color="#7600AD"/></a>
+              <a href="https://github.com/4bdulWadood" target="_blank"><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faSquareGithub} fontSize={35} color="#7600AD"/></a>
+              <a href="https://www.linkedin.com/in/abdul-wadood-syed-978085220/" target="_blank"><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLinkedin} fontSize={35} color="#7600AD"/></a>
           </div>   
           <div className="tech-stack">
               <text>Tech Stack | </text>
