@@ -99,7 +99,7 @@
 }
 @media only screen and (max-width: 768px) {
   .section-projects .project-box {
-    padding: 10px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,6 +130,7 @@
 .section-projects .project-box .left-container .img-project1:hover, .section-projects .project-box .left-container .img-project1:focus {
   transform: translateY(-68.5%);
   transition: transform 10s ease-in-out 0s;
+ 
 }
 @media only screen and (max-width: 1300px) {
   .section-projects .project-box .left-container .img-project1:hover, .section-projects .project-box .left-container .img-project1:focus {
@@ -245,14 +246,14 @@
 }
 @media only screen and (max-width: 1300px) {
   .section-projects .right-container h1 {
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 20px 20px 10px 20px;
   }
 }
 @media only screen and (max-width: 768px) {
   .section-projects .right-container h1 {
-    font-size: 1.3em;
-    margin:6vh 10px 10px 10px;
+    font-size: 2em;
+    margin:10vh 10px 10px 10px;
   }
 }
 .section-projects .right-container .description {
@@ -273,8 +274,8 @@
 }
 @media only screen and (max-width: 768px) {
   .section-projects .right-container .description {
-    font-size: 0.8em;
-    margin: 0px 10px 0px 10px;
+    font-size: 1em;
+    margin: 10px 10px 10px 10px;
   }
 }
 @media only screen and (max-width: 500px) {

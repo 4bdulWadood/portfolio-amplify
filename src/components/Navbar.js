@@ -1,5 +1,5 @@
 import React from "react";
-import menu from "../public/img/hamburger_menu.png";
+import { slide as Menu } from 'react-burger-menu'
 
 export default function Navbar() {
   return (
@@ -8,7 +8,7 @@ export default function Navbar() {
         <a href="#home">
           <div className="nav-logo"><img src={require("../assets/logo.png")} alt="not found"/></div>
         </a>
-        <img src={menu} className="hamburger-menu" />
+        
         <ul>
           <li>
             <a href="#home">Home</a>

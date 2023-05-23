@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react";
-import Map from "./Map";
-import mailIco from "../public/img/mailIco.png";
 import emailjs from "@emailjs/browser";
 import Graphic from '../assets/Graphic.png';
 import { Button } from '../components/StyledButton';

@@ -1,17 +1,8 @@
 import React, { useState } from "react";
-import page2 from "../public/img/page2.png";
-import cssIco from "../public/img/css.png";
-import reactIco from "../public/img/react.png";
-import gitIco from "../public/img/githubIco.png";
-import liveIco from "../public/img/live.png";
-import firebaseIco from "../public/img/firebase.png";
 import FoodCrew from "../assets/FoodCrew.jpg";
 import { SkillWrapper } from './Skill'
 import figmaLogo from "../assets/figmaLogo.png";
-import css3Logo from "../assets/css3Logo.png";
-import ReactLogo from "../assets/ReactLogo.png";
-import AWSLogo from "../assets/AWSLogo.png";
-import NodeLogo from "../assets/NodeLogo.png";
+
 
 export default function Project2() {
   const [html, setHtml] = useState("");

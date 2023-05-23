@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import page1 from "../assets/Gia.jpg";
-import cssIco from "../public/img/css.png";
-import reactIco from "../public/img/react.png";
-import gitIco from "../public/img/githubIco.png";
-import liveIco from "../public/img/live.png";
 import { SkillWrapper } from './Skill'
 import figmaLogo from "../assets/figmaLogo.png";
 import css3Logo from "../assets/css3Logo.png";
 import ReactLogo from "../assets/ReactLogo.png";
-import AWSLogo from "../assets/AWSLogo.png";
-import NodeLogo from "../assets/NodeLogo.png";
+
 
 export default function Project1() {
   const [html, setHtml] = useState("");

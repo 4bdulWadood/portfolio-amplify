@@ -1,18 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import boyGraphic from "../assets/boyGraphic.png";
-import localizationIco from "../public/img/place.png";
-import lndIco from "../public/img/linkedinIco.png";
-import gitIco from "../public/img/githubIco.png";
-import htmlIco from "../public/img/html.png";
-import cssIco from "../public/img/css.png";
-import jsIco from "../public/img/js.png";
-import bootIco from "../public/img/bootstrap.png";
-import reactIco from "../public/img/react.png";
-import threeIco from "../public/img/three.png";
 import NodeLogo from '../assets/NodeLogo.png'
-import avatar from "../public/img/avatar.png";
-import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
