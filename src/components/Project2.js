@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import FoodCrew from "../assets/FoodCrew.jpg";
 import { SkillWrapper } from './Skill'
-import figmaLogo from "../assets/figmaLogo.png";
-
+import awsLogo from "../assets/AWSLogo.png";
 
 export default function Project2() {
   const [html, setHtml] = useState("");
@@ -42,13 +41,13 @@ export default function Project2() {
   return (
     <div className="project-box">
       <div className="right-container">
-        <h1>FoodCrew</h1>
+        <h1>TLR in Action</h1>
         <div className="description">
-          Collaborated with an interdisciplinary team to tackle food insecurity on campus and to work on providing culturally appropriate and sustainable food to those who need it most.
-          2nd Place at Science Discovery Zone's Case Competition on Food Security.
+          Developed a WordPress website for a local non-profit company.
+          Setup CI/CD for existing website using AWS CodePipeline. 
         
           <div className="tech-box">
-            <SkillWrapper size={"1.7rem"} icon={figmaLogo} dimensions={{height: "3vh", width: "60%"}} />
+            <SkillWrapper size={"4.5vh"} icon={awsLogo} dimensions={{height: "3vh", width: "60%"}} />
           </div>
           
         </div>

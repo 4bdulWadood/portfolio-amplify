@@ -195,34 +195,9 @@
   width: 100%;
   overflow-clip-margin: content-box;
   overflow: clip;
-  margin-top: 0px;
-  transform: translateY(0%);
-  transition: transform 10s ease-in-out 0s;
+  margin-top: 8px;
 }
-.section-projects .project-box .left-container .img-project2:hover, .section-projects .project-box .left-container .img-project2:focus {
-  transform: translateY(-67.5%);
-  transition: transform 10s ease-in-out 0s;
-}
-@media only screen and (max-width: 1300px) {
-  .section-projects .project-box .left-container .img-project2:hover, .section-projects .project-box .left-container .img-project2:focus {
-    transform: translateY(-75.5%);
-  }
-}
-@media only screen and (max-width: 950px) {
-  .section-projects .project-box .left-container .img-project2:hover, .section-projects .project-box .left-container .img-project2:focus {
-    transform: translateY(-65.5%);
-  }
-}
-@media only screen and (max-width: 768px) {
-  .section-projects .project-box .left-container .img-project2:hover, .section-projects .project-box .left-container .img-project2:focus {
-    transform: translateY(-55.5%);
-  }
-}
-@media only screen and (max-width: 500px) {
-  .section-projects .project-box .left-container .img-project2:hover, .section-projects .project-box .left-container .img-project2:focus {
-    transform: translateY(-45.5%);
-  }
-}
+
 .section-projects .project-box .left-container .img-project3 {
   width: 100%;
   margin-top: 0%;

@@ -11,7 +11,6 @@ export default function Projects() {
         <Project1 />
         <Project2 />
         <Project3 />
-        <MiniProjects />
       </div>
     </div>
   );
