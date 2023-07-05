@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import FoodCrew from "../assets/FoodCrew.jpg";
+import FoodCrew from "../assets/123Downloads.jpg";
 import { SkillWrapper } from './Skill'
-import awsLogo from "../assets/AWSLogo.png";
+import reactLogo from "../assets/ReactLogo.png";
+import fastAPI from "../assets/fastAPI.jpg";
 
 export default function Project2() {
   const [html, setHtml] = useState("");
@@ -41,13 +42,14 @@ export default function Project2() {
   return (
     <div className="project-box">
       <div className="right-container">
-        <h1>TLR in Action</h1>
+        <h1>Invoice AI - 1st Place TorontoAI Hackathon</h1>
         <div className="description">
-          Developed a WordPress website for a local non-profit company.
-          Setup CI/CD for existing website using AWS CodePipeline. 
+          Trained a Large Language Model to answer queries about personal finances.
+          Utilized Tesseract Library for Optical Character Recognition and dataset generation.
         
           <div className="tech-box">
-            <SkillWrapper size={"4.5vh"} icon={awsLogo} dimensions={{height: "3vh", width: "60%"}} />
+            <SkillWrapper size={"4.5vh"} icon={reactLogo} dimensions={{height: "3vh", width: "60%"}} />
+            <SkillWrapper size={"4.5vh"} icon={fastAPI} dimensions={{height: "3vh", width: "60%"}} />
           </div>
           
         </div>

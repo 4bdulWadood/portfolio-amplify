@@ -89,12 +89,12 @@
   display: flex;
   background-color: #ffffff;
 
-  padding: 20px;
+  padding-top: 5px;
   flex-direction: row;
 }
 @media only screen and (max-width: 1300px) {
   .section-projects .project-box {
-    padding: 15px;
+    padding-top: 15px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -112,12 +112,13 @@
 }
 .section-projects .project-box .left-container {
   width: 50%;
-  height: 75%;
+  height: 85%;
   overflow: hidden;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  margin-top: 0%;
+  padding-top: 0%;
+  margin-bottom: 5px;
 }
 .section-projects .project-box .left-container .img-project1 {
   width: 100%;
@@ -138,7 +139,7 @@
   }
 
   .section-projects .project-box .left-container {
-    height: 75%;
+    height: 80%;
   }
 }
 @media only screen and (max-width: 950px) {

@@ -123,8 +123,6 @@
         width: 100%;
         overflow-clip-margin: content-box;
         overflow: clip;
-        margin-top: 0px;
-        transform: translateY(0%);
         transition: transform 10s ease-in-out 0s;
         &:hover,
         &:focus {
