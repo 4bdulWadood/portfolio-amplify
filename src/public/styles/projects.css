@@ -122,21 +122,15 @@
 }
 .section-projects .project-box .left-container .img-project1 {
   width: 100%;
-  overflow-clip-margin:initial;
-  overflow: clip;
-  transform: translateY(0%);
-  transition: transform 10s ease-in-out 0s;
-  height: 320%;
+  height: 100%;
 }
 .section-projects .project-box .left-container .img-project1:hover, .section-projects .project-box .left-container .img-project1:focus {
-  transform: translateY(-68.5%);
+  
   transition: transform 10s ease-in-out 0s;
  
 }
 @media only screen and (max-width: 1300px) {
-  .section-projects .project-box .left-container .img-project1:hover, .section-projects .project-box .left-container .img-project1:focus {
-    transform: translateY(-70.5%);
-  }
+
 
   .section-projects .project-box .left-container {
     height: 80%;
