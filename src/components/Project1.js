@@ -52,9 +52,9 @@ export default function Project1() {
           caregiver, book, and message the caregiver.
 
           <div className="tech-box">
-              <SkillWrapper size={"1.8rem"} icon={figmaLogo} dimensions={{height: "3vh", width: "50%"}} />
-              <SkillWrapper size={"1.8rem"} icon={css3Logo} dimensions={{height: "3vh", width: "55%"}} />
-              <SkillWrapper size={"1.8rem"} icon={ReactLogo} dimensions={{height: "3vh", width: "60%"}} />
+              <SkillWrapper size={"40px"} icon={figmaLogo} dimensions={{height: "3vh", width: "50%"}} />
+              <SkillWrapper size={"40px"} icon={css3Logo} dimensions={{height: "3vh", width: "55%"}} />
+              <SkillWrapper size={"40px"} icon={ReactLogo} dimensions={{height: "3vh", width: "60%"}} />
 
 
            

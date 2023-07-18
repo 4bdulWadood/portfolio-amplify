@@ -48,8 +48,8 @@ export default function Project2() {
           Utilized Tesseract Library for Optical Character Recognition and dataset generation.
         
           <div className="tech-box">
-            <SkillWrapper size={"4.5vh"} icon={reactLogo} dimensions={{height: "3vh", width: "60%"}} />
-            <SkillWrapper size={"4.5vh"} icon={fastAPI} dimensions={{height: "3vh", width: "60%"}} />
+            <SkillWrapper size={"40px"} icon={reactLogo} dimensions={{height: "3vh", width: "60%"}} />
+            <SkillWrapper size={"40px"} icon={fastAPI} dimensions={{height: "3vh", width: "60%"}} />
           </div>
           
         </div>

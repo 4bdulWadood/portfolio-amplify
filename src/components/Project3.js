@@ -56,9 +56,9 @@ export default function Project3() {
           <br/>
           Developed a web based dashboard for businesses to perform administrative duties.
           <div className="tech-box">
-              <SkillWrapper size={"1.8rem"} icon={NodeLogo} dimensions={{height: "2vh", width: "90%"}} />
-              <SkillWrapper size={"1.8rem"} icon={css3Logo} dimensions={{height: "3vh", width: "55%"}} />
-              <SkillWrapper size={"1.8rem"} icon={ReactLogo} dimensions={{height: "3vh", width: "60%"}} />
+              <SkillWrapper size={"40px"} icon={NodeLogo} dimensions={{height: "2vh", width: "90%"}} />
+              <SkillWrapper size={"40px"} icon={css3Logo} dimensions={{height: "3vh", width: "55%"}} />
+              <SkillWrapper size={"40px"} icon={ReactLogo} dimensions={{height: "3vh", width: "60%"}} />
           </div>
         </div>
       </div>
