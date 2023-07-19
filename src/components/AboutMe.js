@@ -12,7 +12,7 @@ export default function AboutMe() {
           <div className="text">
           Hello, I am a software engineer from Toronto, Ontario, passionate about all the different facets of software engineering.
 I am a final year student at Toronto Metropolitan University eager to learn and acquire new skills. When I’m not
-coding up new projects you can find me me in the gym or on the soccer field. 
+coding up new projects you can find me in the gym or on the soccer field. 
             <br />
             <br />
           </div>
