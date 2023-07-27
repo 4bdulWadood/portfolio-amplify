@@ -16,36 +16,6 @@ import AWSLogo from "../assets/AWSLogo.png";
 import personalPic from "../assets/personalPic.jpg"
 
 export default function MainPage() {
-  const [html, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setJs] = useState("");
-  const [boot, setBoot] = useState("");
-  const [react, setReact] = useState("");
-  const [three, setThree] = useState("");
-
-  const handleMouseEnter = (e) => {
-    if (e.target.id == "HTML") {
-      setHtml(true);
-    } else if (e.target.id == "CSS") {
-      setCss(true);
-    } else if (e.target.id == "JavaScript") {
-      setJs(true);
-    } else if (e.target.id == "Bootstrap") {
-      setBoot(true);
-    } else if (e.target.id == "React") {
-      setReact(true);
-    } else if (e.target.id == "Three.js") {
-      setThree(true);
-    }
-  };
-  const handleMouseLeave = () => {
-    setHtml();
-    setCss();
-    setJs();
-    setBoot();
-    setReact();
-    setThree();
-  };
   return (
     <div className="section-main" id="home">
       <Navbar />
