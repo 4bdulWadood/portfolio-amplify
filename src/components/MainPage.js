@@ -48,11 +48,11 @@ export default function MainPage() {
           </div>   
           <div className="tech-stack">
               <text>Tech Stack | </text>
-              <SkillWrapper size="4.5vmin" icon={figmaLogo} dimensions={{height: "3vh", width: "50%"}} />
-              <SkillWrapper size="4.5vmin" icon={css3Logo} dimensions={{height: "3.25vh", width: "70%", marginTop:"0.25vh"}} />
-              <SkillWrapper size="4.5vmin" icon={ReactLogo} dimensions={{height: "3.5vh", width: "80%"}} />
-              <SkillWrapper size="4.5vmin" icon={NodeLogo} dimensions={{height: "2vh", width: "80%"}} />
-              <SkillWrapper size="4.5vmin" icon={AWSLogo} dimensions={{height: "2vh", width: "65%"}} />
+              <SkillWrapper icon={figmaLogo} dimensions={{height: "3vh", width: "50%"}} />
+              <SkillWrapper icon={css3Logo} dimensions={{height: "3.25vh", width: "70%", marginTop:"0.25vh"}} />
+              <SkillWrapper icon={ReactLogo} dimensions={{height: "3.5vh", width: "80%"}} />
+              <SkillWrapper icon={NodeLogo} dimensions={{height: "2vh", width: "80%"}} />
+              <SkillWrapper icon={AWSLogo} dimensions={{height: "2vh", width: "65%"}} />
           </div>
         </div>
         <div className="right-container">
