@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Skill = styled.div`
-  width: ${props => props.size};
+  width: 4vmin;
   height: 4vh;
   border-radius: 6px;
   border: 2px #C510E3 solid;
@@ -11,10 +11,12 @@ const Skill = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 0.75rem;
+  min-width: 2rem;
+  &>img {
+    width: 20px;
+  }
 
-&>img {
-  width: 20px;
-}
+  
 
 `
 
