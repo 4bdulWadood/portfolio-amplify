@@ -16,9 +16,23 @@ import AWSLogo from "../assets/AWSLogo.png";
 import personalPic from "../assets/personalPic.jpg"
 
 export default function MainPage() {
+
+  function onButtonClick(){
+    fetch('Resume.pdf').then(response => {
+      response.blob().then(blob => {
+          const fileURL = window.URL.createObjectURL(blob);
+          let alink = document.createElement('a');
+          alink.href = fileURL;
+          alink.download = 'SamplePDF.pdf';
+          alink.click();
+      })
+  })
+  }
+
   return (
-    <div className="section-main" id="home">
-      <Navbar />
+    <div id="home">
+    <Navbar />
+    <div className="section-main">
       <div className="main-page-container">
         <div className="left-container">
           <span className="title">Full Stack Web Developer</span>
@@ -28,7 +42,7 @@ export default function MainPage() {
             <FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLocationDot} fontSize={25} color="#7600AD"/>
           </div>
           <div className="social-box">
-              <a href='/resume.pdf'  download><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faFloppyDisk} fontSize={35} color="#7600AD"/></a>
+              <a onClick={onButtonClick}><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faFloppyDisk} fontSize={35} color="#7600AD"/></a>
               <a href="https://github.com/4bdulWadood" target="_blank"><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faSquareGithub} fontSize={35} color="#7600AD"/></a>
               <a href="https://www.linkedin.com/in/abdul-wadood-syed-978085220/" target="_blank"><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLinkedin} fontSize={35} color="#7600AD"/></a>
           </div>   
@@ -51,6 +65,7 @@ export default function MainPage() {
           <img src={personalPic} className="avatar" alt="avatar" />
         </div>
       </div>
+    </div>
     </div>
   );
 }

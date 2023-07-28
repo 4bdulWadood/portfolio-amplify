@@ -42,13 +42,17 @@ export default function Navbar() {
 		);
 	};
 
+  function goTop(e){
+    window.scrollTo(0, 0);
+  }
+
 	return (
 		<header>
 			<a href="#home">
         <div className="nav-logo"><img src={require("../assets/logo.png")} alt="not found"/></div>
       </a>
 			<nav ref={navRef}>
-				<a href="/#home">Home</a>
+				<a href="/#main" onClick={goTop}>Home</a>
 				<a href="/#aboutme">About me</a>
 				<a href="/#projects">Projects</a>
 				<a href="/#contact">Contact me</a>
@@ -67,6 +71,3 @@ export default function Navbar() {
 	);
 }
 
-/*https://www.youtube.com/watch?v=At4B7A4GOPg
-Fix header 
-*/
