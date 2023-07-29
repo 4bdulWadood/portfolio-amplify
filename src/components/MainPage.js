@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
@@ -16,7 +16,13 @@ import ReactLogo from '../assets/ReactLogo.png';
 import AWSLogo from '../assets/AWSLogo.png';
 import personalPic from '../assets/personalPic.jpg';
 
-export default function MainPage() {
+function MainPage() {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   function onButtonClick() {
     fetch('Resume.pdf')
       .then((response) => {
@@ -39,30 +45,34 @@ export default function MainPage() {
       });
   }
 
+  
   return (
     <>
       <Navbar />
-      <Suspense>
         <div id="home" className="section-main">
           <div className="main-page-container">
             <div className="left-container">
               <span className="title">Full Stack Web Developer</span>
-              <img src={boyGraphic} className="boy" alt="hello icon" />
-              <div className="description">
+              <img onLoad={handleImageLoad} src={boyGraphic} className="boy" alt="hello icon" />
+              {isImageLoaded && (
+                <>
+                <div className="description">
                 Hi, I'm Abdul Wadood, A passionate software engineering student and developer based in Toronto, Ontario.
                 <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faLocationDot} fontSize={25} color="#7600AD" />
               </div>
-              <div className="social-box">
-                <a onClick={onButtonClick}>
-                  <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faFloppyDisk} fontSize={35} color="#7600AD" />
-                </a>
-                <a href="https://github.com/4bdulWadood" target="_blank">
-                  <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faSquareGithub} fontSize={35} color="#7600AD" />
-                </a>
-                <a href="https://www.linkedin.com/in/abdul-wadood-syed-978085220/" target="_blank">
-                  <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faLinkedin} fontSize={35} color="#7600AD" />
-                </a>
-              </div>
+                            <div className="social-box">
+                            <a onClick={onButtonClick}>
+                              <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faFloppyDisk} fontSize={35} color="#7600AD" />
+                            </a>
+                            <a href="https://github.com/4bdulWadood" target="_blank">
+                              <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faSquareGithub} fontSize={35} color="#7600AD" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/abdul-wadood-syed-978085220/" target="_blank">
+                              <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faLinkedin} fontSize={35} color="#7600AD" />
+                            </a>
+                          </div>
+                </>
+              )}
               <div className="tech-stack">
                 <text>Tech Stack | </text>
                 <SkillWrapper icon={figmaLogo} dimensions={{ height: '3vh', width: '50%' }} />
@@ -83,7 +93,9 @@ export default function MainPage() {
             </div>
           </div>
         </div>
-      </Suspense>
     </>
   );
 }
+
+
+export default React.memo(MainPage)
