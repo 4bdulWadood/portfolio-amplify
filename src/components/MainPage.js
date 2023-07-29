@@ -20,7 +20,7 @@ import personalPic from '../assets/personalPic.jpg';
 export default function MainPage() {
   function onButtonClick() {
     axios({
-      url: 'https://example.com/Resume.pdf', // Replace with the actual URL of the PDF
+      url: 'https://pdf.ac/EQhc7', // Replace with the actual URL of the PDF
       method: 'GET',
       responseType: 'blob', // Important: responseType must be set to 'blob' for downloading files
     })
