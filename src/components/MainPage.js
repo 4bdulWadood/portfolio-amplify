@@ -7,7 +7,8 @@ import { faLocationDot, faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
 import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Blob from './Blob/Blob';
 import { SkillWrapper } from './Skill';
-
+import axios from 'axios';
+import { saveAs } from 'file-saver';
 import boyGraphic from '../assets/boyGraphic.png';
 import NodeLogo from '../assets/NodeLogo.png';
 import figmaLogo from '../assets/figmaLogo.png';
@@ -18,20 +19,14 @@ import personalPic from '../assets/personalPic.jpg';
 
 export default function MainPage() {
   function onButtonClick() {
-    fetch('Resume.pdf')
+    axios({
+      url: 'https://example.com/Resume.pdf', // Replace with the actual URL of the PDF
+      method: 'GET',
+      responseType: 'blob', // Important: responseType must be set to 'blob' for downloading files
+    })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok.');
-        }
-        return response.blob();
-      })
-      .then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob);
-        let alink = document.createElement('a');
-        alink.href = fileURL;
-        alink.download = 'SamplePDF.pdf';
-        alink.click();
-        window.URL.revokeObjectURL(fileURL); // Cleanup after the download
+        const pdfBlob = new Blob([response.data], { type: 'application/pdf' });
+        saveAs(pdfBlob, 'SamplePDF.pdf'); // FileSaver.js function to save the Blob as a file
       })
       .catch((error) => {
         console.error('Error fetching the PDF:', error);
