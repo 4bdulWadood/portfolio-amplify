@@ -11,11 +11,14 @@ const Skill = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 0.75rem;
-  min-width: 2rem;
+  min-width: 2.45rem;
   &>img {
     width: 20px;
   }
 
+  @media only screen and (max-width: 600px) {
+    margin-left: 0.5rem;
+  }
   
 
 `

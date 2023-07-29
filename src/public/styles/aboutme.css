@@ -1,6 +1,6 @@
 .section-about {
   height: 70vh;
-  padding-top: 80px;
+  margin-top: 10vmin;
 }
 
 .section-about .aboutme-container {
@@ -57,6 +57,7 @@
   .section-about .aboutme-container .description {
     width: 100%;
     margin-left: -15%;
+    margin-top: 5vh;
   }
 }
 .section-about .aboutme-container .description h2 {

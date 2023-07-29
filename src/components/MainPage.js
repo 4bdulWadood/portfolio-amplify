@@ -17,16 +17,26 @@ import personalPic from "../assets/personalPic.jpg"
 
 export default function MainPage() {
 
-  function onButtonClick(){
-    fetch('Resume.pdf').then(response => {
-      response.blob().then(blob => {
-          const fileURL = window.URL.createObjectURL(blob);
-          let alink = document.createElement('a');
-          alink.href = fileURL;
-          alink.download = 'SamplePDF.pdf';
-          alink.click();
+function onButtonClick() {
+    fetch('Resume.pdf')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok.');
+        }
+        return response.blob();
       })
-  })
+      .then(blob => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'SamplePDF.pdf';
+        alink.click();
+        window.URL.revokeObjectURL(fileURL); // Cleanup after the download
+      })
+      .catch(error => {
+        console.error('Error fetching the PDF:', error);
+        // Handle the error or display a message to the user.
+      });
   }
 
 
@@ -34,10 +44,10 @@ export default function MainPage() {
   return (
     <div id="home">
     <Navbar />
+    <Suspense>
     <div className="section-main">
       <div className="main-page-container">
         <div className="left-container">
-        <Suspense>
           <span className="title">Full Stack Web Developer</span>
           <img src={boyGraphic} className="boy" alt="hello icon" />
           <div className="description">
@@ -48,8 +58,7 @@ export default function MainPage() {
               <a onClick={onButtonClick}><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faFloppyDisk} fontSize={35} color="#7600AD"/></a>
               <a href="https://github.com/4bdulWadood" target="_blank"><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faSquareGithub} fontSize={35} color="#7600AD"/></a>
               <a href="https://www.linkedin.com/in/abdul-wadood-syed-978085220/" target="_blank"><FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faLinkedin} fontSize={35} color="#7600AD"/></a>
-          </div>
-          </Suspense>   
+          </div>  
           <div className="tech-stack">
               <text>Tech Stack | </text>
               <SkillWrapper icon={figmaLogo} dimensions={{height: "3vh", width: "50%"}} />
@@ -70,6 +79,7 @@ export default function MainPage() {
         </div>
       </div>
     </div>
+    </Suspense> 
     </div>
   );
 }
