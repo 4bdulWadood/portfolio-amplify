@@ -11,7 +11,7 @@ const Skill = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 0.75rem;
-  min-width: 2.45rem;
+  min-width: 2.2rem;
   &>img {
     width: 20px;
   }
