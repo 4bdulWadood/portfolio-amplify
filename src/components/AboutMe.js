@@ -40,7 +40,7 @@ export default function AboutMe() {
 I am a final year student at Toronto Metropolitan University eager to learn and acquire new skills. When I’m not
 coding up new projects you can find me in the gym or on the soccer field. 
             <br />
-            <Lottie style={style} interactivity={interactivity} animationData={Animated}/>
+            <div className="MobileSpaceman"><Lottie style={style} interactivity={interactivity} animationData={Animated}/></div>
             <br />
           </div>
         </div>

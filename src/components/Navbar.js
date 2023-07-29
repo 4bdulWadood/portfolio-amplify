@@ -57,7 +57,7 @@ export default function Navbar() {
 
 	return (
 		<header>
-			<a href="#home">
+			<a>
         <div className="nav-logo"><img src={require("../assets/logo.png")} alt="not found"/></div>
       </a>
 			<nav ref={navRef}>
