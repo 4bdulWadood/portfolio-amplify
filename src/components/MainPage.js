@@ -53,9 +53,9 @@ export default function MainPage() {
                 <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faLocationDot} fontSize={25} color="#7600AD" />
               </div>
               <div className="social-box">
-                <button onClick={onButtonClick}>
+                <a onClick={onButtonClick}>
                   <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faFloppyDisk} fontSize={35} color="#7600AD" />
-                </button>
+                </a>
                 <a href="https://github.com/4bdulWadood" target="_blank">
                   <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faSquareGithub} fontSize={35} color="#7600AD" />
                 </a>
