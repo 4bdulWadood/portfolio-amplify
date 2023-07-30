@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect, } from 'react';
 import Navbar from './Navbar';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
@@ -7,7 +7,8 @@ import { faLocationDot, faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
 import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Blob from './Blob/Blob';
 import { SkillWrapper } from './Skill';
-
+import Lottie from "lottie-react"
+import Animated from '../assets/lottie.json'
 import boyGraphic from '../assets/boyGraphic.png';
 import NodeLogo from '../assets/NodeLogo.png';
 import figmaLogo from '../assets/figmaLogo.png';
@@ -17,11 +18,40 @@ import AWSLogo from '../assets/AWSLogo.png';
 import personalPic from '../assets/personalPic.jpg';
 
 function MainPage() {
+  const [lottie, setLottie] = useState();
+  const lottieRef = useRef(null);
+
+  const options = {
+    typeSpeed: 50,
+    startDelay: 1500,
+    backSpeed: 50,
+    backDelay: 8000,
+    loop: true,
+  };
+
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const handleImageLoad = () => {
     setIsImageLoaded(true);
   };
+
+  useEffect(() => {
+    import("lottie-web").then((Lottie) => setLottie(Lottie.default));
+  }, []);
+
+  useEffect(() => {
+    if (lottie && lottieRef.current) {
+      const animation = lottie.loadAnimation({
+        container: lottieRef.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        animationData: require("../assets/lottie.json"),
+      });
+
+      return () => animation.destroy();
+    }
+  }, [lottie]);
 
   function onButtonClick() {
     fetch('Resume.pdf')
@@ -83,13 +113,9 @@ function MainPage() {
               </div>
             </div>
             <div className="right-container">
-              <Canvas>
-                <OrbitControls enableZoom={false} />
-                <ambientLight intensity={1} />
-                <directionalLight position={(3, 2, 1)} />
-                <Blob />
-              </Canvas>
-              <img src={personalPic} className="avatar" alt="avatar" />
+            <div
+              ref={lottieRef}
+            ></div>
             </div>
           </div>
         </div>
