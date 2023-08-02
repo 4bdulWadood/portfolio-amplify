@@ -15,10 +15,14 @@ export default function Navbar() {
     import("lottie-web").then((Lottie) => setLottie(Lottie.default));
   }, []);
 
-  var src = '/rain.mp3';
+  let src = ['/rain.mp3', "idealism.mp3",
+    "rude.mp3"];
+
+  src = src[(Math.floor(Math.random() * src.length))]
+
   const [sound, setSound] = useState();
   useLayoutEffect(() => {
-    setSound(new Howl({ src: src }));
+    setSound(new Howl({ src, autoplay: true }));
   }, []);
 
   useEffect(() => {
