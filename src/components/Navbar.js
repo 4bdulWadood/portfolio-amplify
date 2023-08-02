@@ -1,18 +1,24 @@
-import React, {useState, useEffect,Component} from "react";
+import React, {useState, useEffect, useLayoutEffect} from "react";
 import { useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-
+import {Howl} from 'howler';
 
 export default function Navbar() {
+
   const [lottie, setLottie] = useState();
-  const [play, setPlay] = useState(true);
+  const [play2, setPlay] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const lottieRef = useRef(null);
 
-  const [isClicked, setIsClicked] = useState("main");
   useEffect(() => {
     import("lottie-web").then((Lottie) => setLottie(Lottie.default));
+  }, []);
+
+  var src = '/rain.mp3';
+  const [sound, setSound] = useState();
+  useLayoutEffect(() => {
+    setSound(new Howl({ src: src }));
   }, []);
 
   useEffect(() => {
@@ -21,23 +27,24 @@ export default function Navbar() {
         container: lottieRef.current,
         renderer: "svg",
         loop: true,
-        autoplay: play,
+        autoplay: play2,
         animationData: require("../assets/audioButton.json"),
       });
-
       return () => animation.destroy();
     }
-  }, [lottie, play]);
+  }, [lottie, play2]);
 
   const handleClick = (type) => {
     if(type=="main"){
-      goTop()
+      window.scrollTo(0, 0);
     }
     setIsClicked(type);
   };
 
+
   const handlePlay = () => {
-    setPlay(!play);
+    setPlay(!play2);
+    !play2 ? sound.play() : sound.pause();
   };
 
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -66,10 +73,6 @@ export default function Navbar() {
     return windowDimensions;
   }
   
-  const { width } = useWindowDimensions();
-  
-  console.log(width)
-
   const navRef = useRef();
 
 	const showNavbar = () => {
@@ -77,10 +80,6 @@ export default function Navbar() {
 			"responsive_nav"
 		);
 	};
-
-  function goTop(e){
-    window.scrollTo(0, 0);
-  }
 
 	return (
 		<header>
@@ -92,7 +91,6 @@ export default function Navbar() {
 				<a href="/#aboutme" style={{width: "7.3rem"}} onClick={e=>{handleClick("aboutme")}} className={`animated-underline ${isClicked==="aboutme" ? 'clicked' : ''}`}>About me</a>
 				<a href="/#projects" style={{width: "4.4rem"}} onClick={e=>{handleClick("projects")}} className={`animated-underline ${isClicked==="projects" ? 'clicked' : ''}`}>Projects</a>
 				<a href="/#contact" style={{width: "8.3rem"}} onClick={e=>{handleClick("contact")}} className={`animated-underline ${isClicked==="contact" ? 'clicked' : ''}`}>Contact me</a>
-				
         <div
             ref={lottieRef}
             onClick={e=>{handlePlay()}}
