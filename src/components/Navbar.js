@@ -3,14 +3,41 @@ import { useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+
+
 export default function Navbar() {
+  const [lottie, setLottie] = useState();
+  const [play, setPlay] = useState(true);
+  const lottieRef = useRef(null);
+
   const [isClicked, setIsClicked] = useState("main");
+  useEffect(() => {
+    import("lottie-web").then((Lottie) => setLottie(Lottie.default));
+  }, []);
+
+  useEffect(() => {
+    if (lottie && lottieRef.current) {
+      const animation = lottie.loadAnimation({
+        container: lottieRef.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: play,
+        animationData: require("../assets/audioButton.json"),
+      });
+
+      return () => animation.destroy();
+    }
+  }, [lottie, play]);
 
   const handleClick = (type) => {
     if(type=="main"){
       goTop()
     }
     setIsClicked(type);
+  };
+
+  const handlePlay = () => {
+    setPlay(!play);
   };
 
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -61,11 +88,17 @@ export default function Navbar() {
         <div className="nav-logo"><img src={require("../assets/logo.png")} alt="not found"/></div>
       </a>
 			<nav ref={navRef}>
-				<a href="/#main" style={{width: "3.1rem"}} onClick={e=>{handleClick("main")}} className={`animated-underline ${isClicked==="main" ? 'clicked' : ''}`}>Home</a>
-				<a href="/#aboutme" style={{width: "5.3rem"}} onClick={e=>{handleClick("aboutme")}} className={`animated-underline ${isClicked==="aboutme" ? 'clicked' : ''}`}>About me</a>
-				<a href="/#projects" style={{width: "4.25rem"}} onClick={e=>{handleClick("projects")}} className={`animated-underline ${isClicked==="projects" ? 'clicked' : ''}`}>Projects</a>
-				<a href="/#contact" style={{width: "6rem"}} onClick={e=>{handleClick("contact")}} className={`animated-underline ${isClicked==="contact" ? 'clicked' : ''}`}>Contact me</a>
-				<button
+				<a href="/#main" style={{width: "3.3rem"}} onClick={e=>{handleClick("main")}} className={`animated-underline ${isClicked==="main" ? 'clicked' : ''}`}>Home</a>
+				<a href="/#aboutme" style={{width: "7.3rem"}} onClick={e=>{handleClick("aboutme")}} className={`animated-underline ${isClicked==="aboutme" ? 'clicked' : ''}`}>About me</a>
+				<a href="/#projects" style={{width: "4.4rem"}} onClick={e=>{handleClick("projects")}} className={`animated-underline ${isClicked==="projects" ? 'clicked' : ''}`}>Projects</a>
+				<a href="/#contact" style={{width: "8.3rem"}} onClick={e=>{handleClick("contact")}} className={`animated-underline ${isClicked==="contact" ? 'clicked' : ''}`}>Contact me</a>
+				
+        <div
+            ref={lottieRef}
+            onClick={e=>{handlePlay()}}
+            className="audio-icon"
+        ></div>
+        <button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
 					<FontAwesomeIcon style={{marginLeft: "0.5vw" }} icon={faBars} fontSize={25} color="#7600AD"/>

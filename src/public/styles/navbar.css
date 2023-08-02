@@ -13,12 +13,18 @@ header {
   margin-top: -20vh;
 }
 
+.audio-icon {
+	display: flex;
+	height: 4rem;
+	margin-right: 5%;
+}
+
 nav a {
 	margin: 1rem -2rem;
 	text-decoration: none;
 	margin-top: 1rem;
 	margin-right: 2rem;
-	width: 6rem;
+	width: 8rem;
 	margin-left: 0rem;
 	color: linear-gradient(to right, #1a237e, #9c27b0); /* Gradient from dark blue to purple */
 }
@@ -98,8 +104,8 @@ nav {
 	header .nav-btn {
 		visibility: visible;
 		opacity: 1;
-    margin-right: 10%;
-    margin-top: 0.5rem;;
+		margin-right: 10%;
+		margin-top: 0.5rem;;
 	}
 
   nav a {
