@@ -16,7 +16,7 @@ header {
 .audio-icon {
 	display: flex;
 	height: 4rem;
-	margin-right: 5%;
+	margin-right: 2rem;
 }
 
 nav a {
@@ -26,12 +26,12 @@ nav a {
 	margin-right: 2rem;
 	width: 8rem;
 	margin-left: 0rem;
-	color: linear-gradient(to right, #1a237e, #9c27b0); /* Gradient from dark blue to purple */
+	color: #9c27b0; /* Gradient from dark blue to purple */
 }
 
 	  /* Remove the red color when the link is clicked */
 	  a:active {
-		color: #9c27b0; /* Set the header text color as the text color when the link is active (clicked) */
+		color: #9c27b0 !important; /* Set the header text color as the text color when the link is active (clicked) */
 	  }
 
 header .nav-btn {

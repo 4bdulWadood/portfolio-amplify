@@ -22,7 +22,7 @@ export default function Navbar() {
 
   const [sound, setSound] = useState();
   useLayoutEffect(() => {
-    setSound(new Howl({ src, autoplay: true }));
+    setSound(new Howl({ src }));
   }, []);
 
   useEffect(() => {
@@ -91,10 +91,10 @@ export default function Navbar() {
         <div className="nav-logo"><img src={require("../assets/logo.png")} alt="not found"/></div>
       </a>
 			<nav ref={navRef}>
-				<a href="/#main" style={{width: "3.3rem"}} onClick={e=>{handleClick("main")}} className={`animated-underline ${isClicked==="main" ? 'clicked' : ''}`}>Home</a>
-				<a href="/#aboutme" style={{width: "7.3rem"}} onClick={e=>{handleClick("aboutme")}} className={`animated-underline ${isClicked==="aboutme" ? 'clicked' : ''}`}>About me</a>
+				<a href="/#main" style={{width: "3.4rem"}} onClick={e=>{handleClick("main")}} className={`animated-underline ${isClicked==="main" ? 'clicked' : ''}`}>Home</a>
+				<a href="/#aboutme" style={{width: "6.6rem"}} onClick={e=>{handleClick("aboutme")}} className={`animated-underline ${isClicked==="aboutme" ? 'clicked' : ''}`}>About me</a>
 				<a href="/#projects" style={{width: "4.4rem"}} onClick={e=>{handleClick("projects")}} className={`animated-underline ${isClicked==="projects" ? 'clicked' : ''}`}>Projects</a>
-				<a href="/#contact" style={{width: "8.3rem"}} onClick={e=>{handleClick("contact")}} className={`animated-underline ${isClicked==="contact" ? 'clicked' : ''}`}>Contact me</a>
+				<a href="/#contact" style={{width: "7.5rem"}} onClick={e=>{handleClick("contact")}} className={`animated-underline ${isClicked==="contact" ? 'clicked' : ''}`}>Contact me</a>
         <div
             ref={lottieRef}
             onClick={e=>{handlePlay()}}
