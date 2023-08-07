@@ -15,7 +15,7 @@ export default function Navbar() {
     import("lottie-web").then((Lottie) => setLottie(Lottie.default));
   }, []);
 
-  let src = ['/rain.mp3', "idealism.mp3",
+  let src = ['rain.mp3', "idealism.mp3",
     "rude.mp3"];
 
   src = src[(Math.floor(Math.random() * src.length))]
