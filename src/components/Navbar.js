@@ -3,6 +3,9 @@ import { useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {Howl} from 'howler';
+import music1 from '../assets/songs/rain.mp3'
+import music2 from '../assets/songs/otherside.mp3'
+import music3 from '../assets/songs/rain(1).mp3'
 
 export default function Navbar() {
 
@@ -15,8 +18,7 @@ export default function Navbar() {
     import("lottie-web").then((Lottie) => setLottie(Lottie.default));
   }, []);
 
-  let src = ['rain.mp3', "idealism.mp3",
-    "rude.mp3"];
+  let src = [music1, music2, music3];
 
   src = src[(Math.floor(Math.random() * src.length))]
 
@@ -100,6 +102,7 @@ export default function Navbar() {
             onClick={e=>{handlePlay()}}
             className="audio-icon"
         ></div>
+        
         <button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
