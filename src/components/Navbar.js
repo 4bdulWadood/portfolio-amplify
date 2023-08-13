@@ -32,7 +32,7 @@ export default function Navbar() {
       const animation = lottie.loadAnimation({
         container: lottieRef.current,
         renderer: "svg",
-        loop: true,
+        loop: false,
         autoplay: play2,
         animationData: require("../assets/audioButton.json"),
       });
