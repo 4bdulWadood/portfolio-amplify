@@ -30,10 +30,10 @@ const interactivity = {
 
 export default function AboutMe() {
   return (
-    <div className="section-about"  id="aboutme">
+    <div className="section-about">
       <div className="aboutme-container" >
          <img src={portrait}/>
-        <div className="description" >
+        <div className="description" id="aboutme" >
           <h2>About me</h2>
           <div className="text">
           Hello, I am a software engineer from Toronto, Ontario, passionate about all the different facets of software engineering.
