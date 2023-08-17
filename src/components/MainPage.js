@@ -53,27 +53,16 @@ function MainPage() {
     }
   }, [lottie]);
 
-  function onButtonClick() {
-    fetch('Resume.pdf')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok.');
-        }
-        return response.blob();
-      })
-      .then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob);
-        let alink = document.createElement('a');
-        alink.href = fileURL;
-        alink.download = 'SamplePDF.pdf';
-        alink.click();
-        window.URL.revokeObjectURL(fileURL); // Cleanup after the download
-      })
-      .catch((error) => {
-        console.error('Error fetching the PDF:', error);
-        // Handle the error or display a message to the user.
-      });
-  }
+  var pdfUrl = "https://drive.google.com/file/d/1YEM_JMsE8Iarq27KFw5uMN_uBgXL98Pj/view?usp=drive_link"
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.download = 'document.pdf'; // Change the filename if needed
+    link.click();
+  };
 
   
   return (
@@ -91,7 +80,7 @@ function MainPage() {
                 <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faLocationDot} fontSize={25} color="#7600AD" />
               </div>
                             <div className="social-box">
-                            <a onClick={onButtonClick}>
+                            <a onClick={handleDownload}>
                               <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faFloppyDisk} fontSize={35} color="#7600AD" />
                             </a>
                             <a href="https://github.com/4bdulWadood" target="_blank">
