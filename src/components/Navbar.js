@@ -3,9 +3,6 @@ import { useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {Howl} from 'howler';
-import music1 from '../assets/songs/rain.mp3'
-import music2 from '../assets/songs/otherside.mp3'
-import music3 from '../assets/songs/rain(1).mp3'
 
 export default function Navbar() {
 
@@ -18,13 +15,13 @@ export default function Navbar() {
     import("lottie-web").then((Lottie) => setLottie(Lottie.default));
   }, []);
 
-  let src = [music1, music2, music3];
+  let src = ["https://audio.jukehost.co.uk/Lqh5MwaPjKiwBRIsUIWjx9eNMnQ84mAz", "https://audio.jukehost.co.uk/TnXI1s4Rw0ZCaWF6StL2V9wvNXP43THX", "https://audio.jukehost.co.uk/7eemldfTwu8dKluBci9x7pEUArb315Ge"];
 
   src = src[(Math.floor(Math.random() * src.length))]
 
   const [sound, setSound] = useState();
   useLayoutEffect(() => {
-    setSound(new Howl({ src }));
+    setSound(new Howl({ src, format: ['mp3'] }));
   }, []);
 
   useEffect(() => {
@@ -32,16 +29,16 @@ export default function Navbar() {
       const animation = lottie.loadAnimation({
         container: lottieRef.current,
         renderer: "svg",
-        loop: false,
+        loop: true,
         autoplay: play2,
-        animationData: require("../assets/audioButton.json"),
+        animationData: require("../assets/audioButton.json")
       });
       return () => animation.destroy();
     }
   }, [lottie, play2]);
 
   const handleClick = (type) => {
-    if(type=="main"){
+    if(type==="main"){
       window.scrollTo(0, 0);
     }
     setIsClicked(type);
