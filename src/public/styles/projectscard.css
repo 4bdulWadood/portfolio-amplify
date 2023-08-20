@@ -1,0 +1,49 @@
+.Card {
+    height: 40vh;
+    width: 28vh;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.Card > .mainimg {
+    height: 25vh;
+    width: 28vh; 
+    background-color: lightblue;
+    border-radius: 20px;
+}
+  
+.Card > .text {
+    height: 18vh;
+    width: 23vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Card > .text > .header {
+    font-weight: bold;
+    color: #8541AA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2vh;
+    font-size: 1.75vh;
+    margin: 1vh 2vw;
+}
+
+.Card > .text > .body {
+    font-size: 1.10vh;  
+    color: #7D7D7D;
+    padding: 0vh .6vh;
+    margin: 0 0vw;
+    text-align: center;
+}
+
+.Card > .text > .footer {
+    margin-top: 2vh;
+}

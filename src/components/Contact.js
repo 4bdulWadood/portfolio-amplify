@@ -44,7 +44,7 @@ export default function Contact() {
           <input className="input-normal" type="text" id="fname" name="Name" placeholder="Your Phone Number"></input>
           <text>How can I help?</text>
           <input className="input-special" type="text" id="fname" name="Name" placeholder="Tell me a little about your project"></input>
-          <Button />
+          <Button type="next" height="50vh"/>
           
         </div>
 
