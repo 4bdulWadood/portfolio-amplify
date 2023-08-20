@@ -12,8 +12,11 @@
 .Card > .mainimg {
     height: 25vh;
     width: 28vh; 
-    background-color: lightblue;
     border-radius: 20px;
+    background-image: url('../../assets/invoiceAI.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
   
 .Card > .text {
@@ -21,7 +24,6 @@
     width: 23vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
 }
 
@@ -30,18 +32,26 @@
     color: #8541AA;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 2vh;
     font-size: 1.75vh;
     margin: 1vh 2vw;
+    width: 150px;
+}
+
+.Card > .text > .header > img {
+    margin-top: 0.4vh;
+    margin-left: 1vh;
 }
 
 .Card > .text > .body {
-    font-size: 1.10vh;  
+    font-size: 1.10vh;
+      
     color: #7D7D7D;
     padding: 0vh .6vh;
     margin: 0 0vw;
     text-align: center;
+    
 }
 
 .Card > .text > .footer {
