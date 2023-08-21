@@ -49,9 +49,9 @@ export default function Projects() {
   
   return (
     <div className="Cards" ref={cardRef}>
-        <ProjectCard name={ProjectData[0].name} logo1={ProjectData[0].logo1} logo2={ProjectData[0].logo2} logo3={ProjectData[0].logo3} text={ProjectData[0].text} goTo={ProjectData[0].goTo}/>
-        <ProjectCard name={ProjectData[1].name} logo1={ProjectData[1].logo1} logo2={ProjectData[1].logo2} logo3={ProjectData[1].logo3} text={ProjectData[1].text} goTo={ProjectData[1].goTo}/>
-        <ProjectCard name={ProjectData[2].name} logo1={ProjectData[2].logo1} logo2={ProjectData[2].logo2} logo3={ProjectData[2].logo3} text={ProjectData[2].text} goTo={ProjectData[2].goTo}/>
+        <ProjectCard ProjectData={ProjectData[0]}/>
+        <ProjectCard ProjectData={ProjectData[1]}/>
+        <ProjectCard ProjectData={ProjectData[2]}/>
     </div>
   );
 }

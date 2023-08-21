@@ -2,17 +2,19 @@ import "../public/styles/projectscard.css";
 import { Button } from '../components/StyledButton';
 
 
-function ProjectCard({name, logo1=null, logo2=null, logo3=null, text, goTo}) {
-  return (
+function ProjectCard(prop) {
+    const {ProjectData} = prop;
+
+    return (
     <div className="Card">
-        <div className={name}></div>
+        <div className={ProjectData.name}></div>
         <div className="text">
             <div className="header">
-                <div>{name}</div>
+                <div>{ProjectData.name}</div>
                 {
-                    logo1 ?
+                    ProjectData.logo1 ?
                         <img
-                            src={logo1}
+                            src={ProjectData.logo1}
                             alt="Example Image"
                             width="15"
                             height="15"
@@ -20,9 +22,9 @@ function ProjectCard({name, logo1=null, logo2=null, logo3=null, text, goTo}) {
                     : null
                 }
                                 {
-                logo2 ?
+                ProjectData.logo2 ?
                         <img
-                            src={logo2}
+                            src={ProjectData.logo2}
                             alt="Example Image"
                             width="20"
                             height="15"
@@ -30,9 +32,9 @@ function ProjectCard({name, logo1=null, logo2=null, logo3=null, text, goTo}) {
                     : null
                 }
                                 {
-                logo3 ?
+                ProjectData.logo3 ?
                         <img
-                            src={logo3}
+                            src={ProjectData.logo3}
                             alt="Example Image"
                             width="15"
                             height="15"
@@ -41,9 +43,9 @@ function ProjectCard({name, logo1=null, logo2=null, logo3=null, text, goTo}) {
                 }
             </div>
             <div className="body">
-                {text}
+                {ProjectData.text}
             </div>
-            <div className="footer"><a href={goTo}><Button/></a></div>
+            <div className="footer"><a href={ProjectData.goTo}><Button/></a></div>
         </div>
     </div>
   );
