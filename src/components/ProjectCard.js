@@ -2,9 +2,9 @@ import "../public/styles/projectscard.css";
 import { Button } from '../components/StyledButton';
 
 
-function ProjectCard() {
+function ProjectCard({ref}) {
   return (
-    <div className="Card">
+    <div className="Card" ref={ref}>
         <div className="mainimg"></div>
         <div className="text">
             <div className="header">

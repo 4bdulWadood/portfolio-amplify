@@ -1,9 +1,16 @@
 .Cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 75vh;
-  margin: 10vh 0;
-  background-color: rgb(227, 243, 243);
+  margin: 10vh 18vw;
+  flex-direction: row;
 }
 
+@media (max-width: 800px) {
+  .Cards {
+    flex-direction: column;
+    margin-top: 40vh;
+    margin-bottom: 20vh;
+  }
+}

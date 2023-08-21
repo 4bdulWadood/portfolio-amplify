@@ -8,20 +8,21 @@ import "../public/styles/projects.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {  
-  const imgRef = useRef(null);
+  const cardRef = useRef(null);
 
 
   useEffect(()=>{
-    const el = imgRef.current;
-    /*gsap.fromTo(el, {rotation: 0}, {rotation: 360*4, duration: 3, scrollTrigger: {
+    const el = cardRef.current;
+    gsap.fromTo(el, {opacity: 0}, {opacity: 1, duration: 1.75, scrollTrigger: {
       trigger: el
-    }})*/
+    }})
   }, []);
 
   return (
-    <div id = "projects" className="Cards" >
+    <div id = "projects" className="Cards" ref={cardRef}>
         <ProjectCard/>
-        
+        <ProjectCard/>
+        <ProjectCard/>
     </div>
   );
 }

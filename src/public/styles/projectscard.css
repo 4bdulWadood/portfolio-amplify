@@ -1,7 +1,7 @@
 .Card {
     height: 40vh;
     width: 28vh;
-    background-color: white;
+    background-color: rgb(243, 243, 243);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -57,3 +57,9 @@
 .Card > .text > .footer {
     margin-top: 2vh;
 }
+
+@media (max-width: 800px) {
+    .Card {
+      margin-top: 5vh;
+    }
+  }
