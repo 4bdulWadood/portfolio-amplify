@@ -13,8 +13,9 @@ export default function Projects() {
 
   useEffect(()=>{
     const el = cardRef.current;
-    gsap.fromTo(el, {opacity: 0}, {opacity: 1, duration: 1.75, scrollTrigger: {
-      trigger: el
+    gsap.fromTo(el, {opacity: 0}, {opacity: 1, duration: 1.5,  ease: "power2.inOut", scrollTrigger: {
+      trigger: el, 
+      toggleActions:'restart none restart reset',
     }})
   }, []);
 
