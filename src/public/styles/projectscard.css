@@ -9,7 +9,7 @@
     align-items: center;
 }
   
-.Card > .mainimg {
+.InvoiceAI {
     height: 25vh;
     width: 28vh; 
     border-radius: 20px;
@@ -19,6 +19,27 @@
     background-repeat: no-repeat;
 }
   
+.Gia {
+    height: 25vh;
+    width: 28vh; 
+    border-radius: 20px;
+    background-image: url('../../assets/giaLogo.png'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 300px;
+}
+
+.Andie {
+    height: 25vh;
+    width: 28vh; 
+    border-radius: 20px;
+    background-image: url('../../assets/and.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .Card > .text {
     height: 18vh;
     width: 23vh;
@@ -46,7 +67,7 @@
 
 .Card > .text > .body {
     font-size: 1.10vh;
-      
+    font-weight: bolder;  
     color: #7D7D7D;
     padding: 0vh .6vh;
     margin: 0 0vw;

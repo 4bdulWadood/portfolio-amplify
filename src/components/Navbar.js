@@ -25,6 +25,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    
     if (lottie && lottieRef.current) {
       const animation = lottie.loadAnimation({
         container: lottieRef.current,
@@ -41,6 +42,23 @@ export default function Navbar() {
     if(type==="main"){
       window.scrollTo(0, 0);
     }
+    if(type==="projects"){
+      window.scrollTo(0, 1400);
+    }
+
+
+    switch (type) {
+      case "projects":
+        window.scrollTo(0, 1400);
+        break;
+      case "aboutme":
+        window.scrollTo(0, 800);
+        break;
+      default:
+        window.scrollTo(0, 0);
+        break;
+    }
+
     setIsClicked(type);
   };
 
@@ -50,31 +68,6 @@ export default function Navbar() {
     !play2 ? sound.play() : sound.pause();
   };
 
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height
-    };
-  }
-  
-  function useWindowDimensions() {
-    const [windowDimensions, setWindowDimensions] = useState(
-      getWindowDimensions()
-    );
-  
-    useEffect(() => {
-      function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-      }
-  
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-  
-    return windowDimensions;
-  }
   
   const navRef = useRef();
 
