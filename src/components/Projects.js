@@ -50,7 +50,7 @@ export default function Projects() {
       logo1: links[0],
       logo2: links[3],
       logo3: links[4],
-      text: "Lab2Client is an innovative web platform that connects the broader research and innovation community with under-utilized experimental research facilities.",
+      text: "Lab2Client is an innovative web platform that connects the research communities with experimental research facilities.",
       goTo: "https://lab2client.com/"
     }, 
     {
