@@ -7,38 +7,40 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin: 10vh 4vh;
+}
+
+.ProjectImg {
+    height: 25vh;
+    width: 28vh; 
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
   
 .InvoiceAI {
-    height: 25vh;
-    width: 28vh; 
-    border-radius: 20px;
     background-image: url('../../assets/invoiceAI.jpg'); /* Path to your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
   
 .Gia {
-    height: 25vh;
-    width: 28vh; 
-    border-radius: 20px;
+
     background-image: url('../../assets/giaLogo.png'); /* Path to your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 300px;
 }
 
 .Andie {
-    height: 25vh;
-    width: 28vh; 
-    border-radius: 20px;
     background-image: url('../../assets/and.jpg'); /* Path to your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
+
+.Lab2Client {
+    background-image: url('../../assets/lab2client.jpg'); /* Path to your image */
+}
+
+.IEEE {
+    background-image: url('../../assets/TMUIEEE.jpg');
+}
+
+
 
 .Card > .text {
     height: 18vh;
@@ -81,6 +83,6 @@
 
 @media (max-width: 800px) {
     .Card {
-      margin-top: 5vh;
+      margin-top: 10vh;
     }
   }

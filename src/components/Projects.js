@@ -45,11 +45,27 @@ export default function Projects() {
       text: "The Andie app offers real-time traffic and trial solutions to help businesses reach nearby customers.",
       goTo: "https://www.get.alwaysandie.com/"
     }, 
+    {
+      name: "Lab2Client",
+      logo1: links[0],
+      logo2: links[3],
+      logo3: links[4],
+      text: "Lab2Client is an innovative web platform that connects the broader research and innovation community with under-utilized experimental research facilities.",
+      goTo: "https://lab2client.com/"
+    }, 
+    {
+      name: "IEEE",
+      logo1: links[0],
+      text: "IEEE empowers students by bridging the gap between industry and academia",
+      goTo: "https://ieeetorontomu.ca/"
+    }
 
   ]
   
   return (
     <div className="Cards" ref={cardRef}>
+        <ProjectCard ProjectData={ProjectData[4]}/>
+        <ProjectCard ProjectData={ProjectData[3]}/>
         <ProjectCard ProjectData={ProjectData[0]}/>
         <ProjectCard ProjectData={ProjectData[1]}/>
         <ProjectCard ProjectData={ProjectData[2]}/>

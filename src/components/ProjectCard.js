@@ -7,7 +7,7 @@ function ProjectCard(prop) {
 
     return (
     <div className="Card">
-        <div className={ProjectData.name}></div>
+        <div className={"ProjectImg "+ProjectData.name}></div>
         <div className="text">
             <div className="header">
                 <div>{ProjectData.name}</div>
