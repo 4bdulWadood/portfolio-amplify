@@ -48,8 +48,8 @@ export default function Navbar() {
 
 
     switch (type) {
-      case "experiences":
-        window.scrollTo(0, 1400);
+      case "projects":
+        window.scrollTo(0, 1800);
         break;
       case "aboutme":
         window.scrollTo(0, 800);
@@ -85,7 +85,7 @@ export default function Navbar() {
 			<nav ref={navRef}>
 				<a href="/#main" style={{width: "3.4rem"}} onClick={e=>{handleClick("main")}} className={`animated-underline ${isClicked==="main" ? 'clicked' : ''}`}>Home</a>
 				<a href="/#aboutme" style={{width: "6.6rem"}} onClick={e=>{handleClick("aboutme")}} className={`animated-underline ${isClicked==="aboutme" ? 'clicked' : ''}`}>About me</a>
-				<a href="/#projects" style={{width: "4.4rem"}} onClick={e=>{handleClick("experiences")}} className={`animated-underline ${isClicked==="projects" ? 'clicked' : ''}`}>Projects</a>
+				<a href="/#projects" style={{width: "4.4rem"}} onClick={e=>{handleClick("projects")}} className={`animated-underline ${isClicked==="projects" ? 'clicked' : ''}`}>Projects</a>
 				<a href="/#contact" style={{width: "7.5rem"}} onClick={e=>{handleClick("contact")}} className={`animated-underline ${isClicked==="contact" ? 'clicked' : ''}`}>Contact me</a>
         <div
             ref={lottieRef}
