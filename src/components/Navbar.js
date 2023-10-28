@@ -49,7 +49,7 @@ export default function Navbar() {
 
     switch (type) {
       case "projects":
-        window.scrollTo(0, 1800);
+        window.scrollTo(0, 1390);
         break;
       case "aboutme":
         window.scrollTo(0, 800);
