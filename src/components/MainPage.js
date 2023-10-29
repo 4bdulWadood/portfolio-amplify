@@ -53,7 +53,7 @@ function MainPage() {
     }
   }, [lottie]);
 
-  var pdfUrl = "https://drive.google.com/file/d/1YEM_JMsE8Iarq27KFw5uMN_uBgXL98Pj/view?usp=drive_link"
+  var pdfUrl = "https://drive.google.com/file/d/1JKhrx6BT0XM8j4hSnzipcy8GDKkODmQe/view"
 
   const handleDownload = () => {
     const link = document.createElement('a');
