@@ -7,7 +7,7 @@ function ProjectCard(prop) {
 
     return (
     <div className="Card">
-        <div className={"ProjectImg "+ProjectData.name}></div>
+        <div className={("ProjectImg "+ ProjectData.name) || "IBM"}></div>
         <div className="text">
             <div className="header">
                 <div>{ProjectData.name}</div>
@@ -31,7 +31,7 @@ function ProjectCard(prop) {
                         />
                     : null
                 }
-                                {
+                {
                 ProjectData.logo3 ?
                         <img
                             src={ProjectData.logo3}
@@ -41,6 +41,7 @@ function ProjectCard(prop) {
                         />
                     : null
                 }
+                
             </div>
             <div className="body">
                 {ProjectData.text}

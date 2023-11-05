@@ -40,7 +40,9 @@
     background-image: url('../../assets/TMUIEEE.jpg');
 }
 
-
+.IBM {
+    background-image: url('../../assets/WatsonStudio.png');
+}
 
 .Card > .text {
     height: 18vh;

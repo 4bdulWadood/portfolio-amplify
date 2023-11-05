@@ -53,10 +53,16 @@ export default function Projects() {
       text: "Lab2Client is an innovative web platform that connects the research communities with experimental research facilities.",
       goTo: "https://lab2client.com/"
     },
+    {
+      name: "IBM - Watson Studio",
+      text: "IBM Watson Studio is an IDE to build, run and manage AI models.",
+      goTo: "https://www.linkedin.com/feed/update/urn:li:activity:7082104282375733248/"
+    }
   ]
   
   return (
     <div className="Cards" ref={cardRef}>
+        <ProjectCard ProjectData={ProjectData[4]}/>
         <ProjectCard ProjectData={ProjectData[3]}/>
         <ProjectCard ProjectData={ProjectData[0]}/>
         <ProjectCard ProjectData={ProjectData[1]}/>
