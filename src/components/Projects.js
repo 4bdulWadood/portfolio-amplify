@@ -56,7 +56,7 @@ export default function Projects() {
     {
       name: "IBM - Watson Studio",
       text: "IBM Watson Studio is an IDE to build, run and manage AI models.",
-      goTo: "https://www.linkedin.com/feed/update/urn:li:activity:7082104282375733248/"
+      goTo: "https://www.ibm.com/products/watson-studio"
     }
   ]
   
