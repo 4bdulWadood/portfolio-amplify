@@ -34,10 +34,12 @@ export default function AboutMe() {
       <div className="aboutme-container" >
          <img src={portrait}/>
         <div className="description" >
-          <h2>About me</h2>
+          <h2>Who Am I?</h2>
           <div className="text">
-          Hello, I am a software engineer from Toronto, Ontario, passionate about all the different facets of software engineering.
-I am a final year student at Toronto Metropolitan University eager to learn and acquire new skills.
+            When it comes to the work I do I dislike labels. I don't like to define myself as a backend, frontend, full-stack developer or cloud architect, but rather someone who seeks to understand and build quality software products. The 
+            need to specialize in one field and pick a lane is important for staying employed in a competitve job market, however, having a holistic view of the software is equally important to build great software products as it enables transparent 
+            communication within an organization and it fosters product ownership in the employees. It's like being a versatile musician who can play multiple instruments - you might be talented at one instrument, but the ability to harmonize with others makes
+            the ensemble shine.
             <br />
             <div className="MobileSpaceman"><Lottie style={style} interactivity={interactivity} animationData={Animated}/></div>
             <br />
