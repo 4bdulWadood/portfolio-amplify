@@ -15,6 +15,7 @@ import figmaLogo from '../assets/figmaLogo.png';
 import css3Logo from '../assets/css3Logo.png';
 import ReactLogo from '../assets/ReactLogo.png';
 import AWSLogo from '../assets/AWSLogo.png';
+import KubernetesLogo from '../assets/Kubernetes.png'
 import personalPic from '../assets/personalPic.jpg';
 
 function MainPage() {
@@ -89,6 +90,7 @@ function MainPage() {
                             <a href="https://www.linkedin.com/in/abdul-wadood-syed-978085220/" target="_blank">
                               <FontAwesomeIcon style={{ marginLeft: '0.5vw' }} icon={faLinkedin} fontSize={35} color="#7600AD" />
                             </a>
+                            
                           </div>
                 </>
               )}
@@ -99,6 +101,7 @@ function MainPage() {
                 <SkillWrapper icon={ReactLogo} dimensions={{ height: '3.5vh', width: '80%' }} />
                 <SkillWrapper icon={NodeLogo} dimensions={{ height: '2vh', width: '80%' }} />
                 <SkillWrapper icon={AWSLogo} dimensions={{ height: '2vh', width: '65%' }} />
+                <SkillWrapper icon={KubernetesLogo} dimensions={{ height: '1.5rem', width: '1.5rem' }} />
               </div>
             </div>
             <div className="right-container">

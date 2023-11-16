@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Skill = styled.div`
-  width: 4vmin;
+  width: 30px;
   height: 4vh;
   border-radius: 6px;
   border: 2px #C510E3 solid;
@@ -18,12 +18,13 @@ const Skill = styled.div`
 
   @media only screen and (max-width: 600px) {
     margin-left: 0.5rem;
-    width: 7vw;
+    width: 6vw;
+    height: 4vh;
   }
   
 
 `
 
 export const SkillWrapper = ({icon, dimensions, size}) => {
-  return <Skill size={size}><img style={{...dimensions}} src={icon}  alt="hello icon" /></Skill>;
+  return <Skill><img style={{...dimensions}} src={icon}  alt="hello icon" /></Skill>;
 };
