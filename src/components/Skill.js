@@ -18,7 +18,6 @@ const Skill = styled.div`
 
   @media only screen and (max-width: 600px) {
     margin-left: 0.5rem;
-    width: 6vw;
     height: 4vh;
   }
   
