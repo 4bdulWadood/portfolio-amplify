@@ -12,13 +12,12 @@ const Skill = styled.div`
   align-items: center;
   margin-left: 0.75rem;
   min-width: 2vw;
-  &>img {
-    width: 20px;
-  }
 
   @media only screen and (max-width: 600px) {
     margin-left: 0.5rem;
-    height: 4vh;
+    width: 20px;
+    height: 2.5vh;
+    margin-top: 1.5%;
   }
   
 

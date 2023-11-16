@@ -96,12 +96,12 @@ function MainPage() {
               )}
               <div className="tech-stack">
                 <text>Tech Stack | </text>
-                <SkillWrapper icon={figmaLogo} dimensions={{ height: '3vh', width: '50%' }} />
-                <SkillWrapper icon={css3Logo} dimensions={{ height: '3.25vh', width: '70%', marginTop: '0.25vh' }} />
-                <SkillWrapper icon={ReactLogo} dimensions={{ height: '3.5vh', width: '80%' }} />
-                <SkillWrapper icon={NodeLogo} dimensions={{ height: '2vh', width: '80%' }} />
-                <SkillWrapper icon={AWSLogo} dimensions={{ height: '2vh', width: '65%' }} />
-                <SkillWrapper icon={KubernetesLogo} dimensions={{ height: '1.5rem', width: '1.5rem' }} />
+                <SkillWrapper icon={figmaLogo} dimensions={{ height: '70%', width: '50%' }} />
+                <SkillWrapper icon={css3Logo} dimensions={{ height: '75%', width: '70%', marginTop: '0.25vh' }} />
+                <SkillWrapper icon={ReactLogo} dimensions={{ height: '70%', width: '80%' }} />
+                <SkillWrapper icon={NodeLogo} dimensions={{ height: '60%', width: '80%' }} />
+                <SkillWrapper icon={AWSLogo} dimensions={{ height: '60%', width: '70%' }} />
+                <SkillWrapper icon={KubernetesLogo} dimensions={{ height: '80%', width: '80%' }} />
               </div>
             </div>
             <div className="right-container">
