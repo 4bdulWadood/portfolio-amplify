@@ -11,13 +11,31 @@ export default function Projects() {
   const cardRef = useRef(null);
 
 
-  useEffect(()=>{
+  useEffect(() => {
     const el = cardRef.current;
-    gsap.fromTo(el, {opacity: 0}, {opacity: 1, duration: 1.5,  ease: "power2.inOut", scrollTrigger: {
-      trigger: el, 
-      toggleActions:'restart none restart reset',
-    }})
+  
+    gsap.fromTo(
+      el,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: el,
+          toggleActions: 'play none none none',
+          onEnter: () => {
+            gsap.set(el, { opacity: 1 });
+          },
+          once: true, // Set to true to make the animation happen only once
+          end: 'bottom top', // Adjust this value to ensure the animation stays active
+        },
+      }
+    );
   }, []);
+  
+  
+  
 
   const links = ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png?20220125121207","https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png", "https://pbs.twimg.com/profile_images/1417542931209199621/fWMEIB5j_400x400.jpg", "https://cdn.worldvectorlogo.com/logos/next-js.svg", "https://w7.pngwing.com/pngs/330/211/png-transparent-node-js-javascript-express-js-server-side-scripting-front-and-back-ends-node-js-angle-logo-web-application.png" ];
   const ProjectData = [
@@ -54,14 +72,15 @@ export default function Projects() {
       goTo: "https://lab2client.com/"
     },
     {
-      name: "IBM - Watson Studio",
-      text: "IBM Watson Studio is an IDE to build, run and manage AI models.",
-      goTo: "https://www.ibm.com/products/watson-studio"
+      name: "IBM - WatsonX",
+      text: "IBM Watsonx is IBM's commercial generative AI and scientific data platform based on the cloud. Supported the dev team as DevOps Developer. ",
+      goTo: "https://en.wikipedia.org/wiki/IBM_Watsonx"
     }
   ]
   
   return (
     <div className="Cards" ref={cardRef}>
+        <ProjectCard ProjectData={ProjectData[4]}/>
         <ProjectCard ProjectData={ProjectData[3]}/>
         <ProjectCard ProjectData={ProjectData[0]}/>
         <ProjectCard ProjectData={ProjectData[1]}/>

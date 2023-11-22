@@ -2,15 +2,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 75vh;
-  margin: 7vh 18vw;
+  height: 240px;
+  margin: 30vh 18vw;
   flex-direction: row;
 }
 
 @media (max-width: 800px) {
   .Cards {
     flex-direction: column;
-    margin-top: 100vh;
-    margin-bottom: 100vh;
+    height: 200%;
+    margin-top: 100%;
+    margin-bottom: -10%;
   }
 }
