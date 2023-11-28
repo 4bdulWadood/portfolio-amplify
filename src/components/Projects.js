@@ -80,7 +80,6 @@ export default function Projects() {
   
   return (
     <div className="Cards" ref={cardRef}>
-        <ProjectCard ProjectData={ProjectData[4]}/>
         <ProjectCard ProjectData={ProjectData[3]}/>
         <ProjectCard ProjectData={ProjectData[0]}/>
         <ProjectCard ProjectData={ProjectData[1]}/>
