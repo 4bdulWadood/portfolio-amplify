@@ -52,8 +52,8 @@ export default function Projects() {
       logo1: links[0],
       logo2: links[3],
       logo3: links[4], 
-      text: "Gia Health helps families manage and co-ordinate their in-home elder care using AI. Developed Dashboard and backend.",
-      goTo: "https://www.gia.care/"
+      text: "Gia Health helps families manage and coordinate their in-home elder care using AI. Developed Dashboard and backend.",
+      goTo: "https://entrepreneurs.utoronto.ca/startup/gia-health/"
     }, 
     {
       name: "Andie",
@@ -73,7 +73,7 @@ export default function Projects() {
     },
     {
       name: "IBM - WatsonX",
-      text: "IBM Watsonx is IBM's commercial generative AI and scientific data platform based on the cloud. Supported the dev team as DevOps Developer. ",
+      text: "IBM WatsonX is IBM's commercial generative AI and scientific data platform based on the cloud. Supported the dev team as DevOps Developer. ",
       goTo: "https://en.wikipedia.org/wiki/IBM_Watsonx"
     }
   ]
