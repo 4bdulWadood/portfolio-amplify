@@ -72,7 +72,7 @@ function MainPage() {
         <div id="home" className="section-main">
           <div className="main-page-container">
             <div className="left-container">
-              <span className="title">An Engineer</span>
+              <span className="title">DevOps Engineer</span>
               <div style={{marginTop: "-0.5rem", marginLeft: "5rem" }}><img onLoad={handleImageLoad} src={boyGraphic} className="boy" alt="hello icon" /></div>
               {isImageLoaded && (
                 <>
