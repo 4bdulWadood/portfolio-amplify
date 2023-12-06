@@ -52,8 +52,6 @@
 
 .section-main .main-page-container .left-container .boy {
   width: 80px;
-  margin-left: 20rem;
-  margin-top: -5rem;
 }
 @media only screen and (max-width: 1450px) {
   .section-main .main-page-container .left-container .boy {
@@ -73,17 +71,25 @@
 }
 .section-main .main-page-container .left-container .description {
   font-size: 1.5em;
-  margin-top: 30px;
   font-family: "Helvetica";
   font-weight: bold;
   width: 100%;
   color: #454545;
 }
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1500px) {
+  .section-main .main-page-container .left-container .description {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
   .section-main .main-page-container .left-container .description {
     width: 80%;
   }
 }
+
+
 @media only screen and (max-width: 768px) {
   .section-main .main-page-container .left-container .description {
     font-size: 1.6em;
