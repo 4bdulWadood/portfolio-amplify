@@ -72,14 +72,15 @@ export default function Projects() {
       goTo: "https://lab2client.com/"
     },
     {
-      name: "IBM - WatsonX",
-      text: "IBM WatsonX is IBM's commercial generative AI and scientific data platform based on the cloud. Supported the dev team as DevOps Developer. ",
+      name: "IBM - watsonx.ai",
+      text: "IBM WatsonX is IBM's commercial generative AI and scientific data platform based on the cloud.",
       goTo: "https://en.wikipedia.org/wiki/IBM_Watsonx"
     }
   ]
   
   return (
     <div className="Cards" ref={cardRef}>
+        <ProjectCard ProjectData={ProjectData[4]}/>
         <ProjectCard ProjectData={ProjectData[3]}/>
         <ProjectCard ProjectData={ProjectData[0]}/>
         <ProjectCard ProjectData={ProjectData[1]}/>

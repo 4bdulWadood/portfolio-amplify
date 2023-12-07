@@ -41,7 +41,11 @@
 }
 
 .IBM {
-    background-image: url('../../assets/WatsonStudio.png');
+    background-image: url('../../assets/WatsonX.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f7f3f2; 
 }
 
 .Card > .text {
