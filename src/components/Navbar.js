@@ -5,11 +5,11 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {Howl} from 'howler';
 
 export default function Navbar() {
-
   const [lottie, setLottie] = useState();
   const [play2, setPlay] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const lottieRef = useRef(null);
+  const soundRef = useRef();
 
   useEffect(() => {
     import("lottie-web").then((Lottie) => setLottie(Lottie.default));
@@ -17,26 +17,43 @@ export default function Navbar() {
 
   let src = ["https://audio.jukehost.co.uk/Lqh5MwaPjKiwBRIsUIWjx9eNMnQ84mAz", "https://audio.jukehost.co.uk/TnXI1s4Rw0ZCaWF6StL2V9wvNXP43THX", "https://audio.jukehost.co.uk/7eemldfTwu8dKluBci9x7pEUArb315Ge"];
 
-  src = src[(Math.floor(Math.random() * src.length))]
+  const getRandomSong = () => src[Math.floor(Math.random() * src.length)];
 
-  const [sound, setSound] = useState();
-  useLayoutEffect(() => {
-    setSound(new Howl({ src, format: ['mp3'] }));
-  }, []);
+  
+  /*
+    'getRandomSong' is assigned an arrow function that returns a randomly selected element from the 'src' array. This approach is using a function because it allows for dynamic behavior - each time you call 'getRandomSong()', it will return a different random song from the 'src' array.
+    If you were to use a normal variable instead of a function then it's value would be set once when the page first renders and subsequence calls to that variable would always return the same value.
+  */
 
-  useEffect(() => {
-    
-    if (lottie && lottieRef.current) {
-      const animation = lottie.loadAnimation({
-        container: lottieRef.current,
-        renderer: "svg",
-        loop: true,
-        autoplay: play2,
-        animationData: require("../assets/audioButton.json")
+    const playNextSong = () => {
+      soundRef.current = new Howl({
+        src: getRandomSong(),
+        format: ['mp3'],
+        onend: playNextSong,
       });
-      return () => animation.destroy();
-    }
-  }, [lottie, play2]);
+      soundRef.current.play();
+    };
+  
+    useLayoutEffect(() => {
+      soundRef.current = new Howl({
+        src: getRandomSong(),
+        format: ['mp3'],
+        onend: playNextSong,
+      });
+    }, []);
+  
+    useEffect(() => {
+      if (lottie && lottieRef.current) {
+        const animation = lottie.loadAnimation({
+          container: lottieRef.current,
+          renderer: "svg",
+          loop: true,
+          autoplay: play2,
+          animationData: require("../assets/audioButton.json")
+        });
+        return () => animation.destroy();
+      }
+    }, [lottie, play2]);
 
   const handleClick = (type) => {
     if(type==="main"){
@@ -65,7 +82,7 @@ export default function Navbar() {
 
   const handlePlay = () => {
     setPlay(!play2);
-    !play2 ? sound.play() : sound.pause();
+    !play2 ? soundRef.current.play() : soundRef.current.pause();
   };
 
   
