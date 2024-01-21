@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Skill = styled.div`
   width: 30px;
-  height: 4vh;
+  height: 3.5vh;
   border-radius: 6px;
   border: 2px #C510E3 solid;
   display: flex;

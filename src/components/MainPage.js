@@ -61,7 +61,7 @@ function MainPage() {
     link.href = pdfUrl;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.download = 'document.pdf'; // Change the filename if needed
+    link.download = 'document.pdf'; 
     link.click();
   };
 
@@ -96,13 +96,18 @@ function MainPage() {
               )}
               <div className="tech-stack">
                 <text>Tech Stack | </text>
-                <SkillWrapper icon={figmaLogo} dimensions={{ height: '70%', width: '50%' }} />
-                <SkillWrapper icon={css3Logo} dimensions={{ height: '75%', width: '70%', marginTop: '0.25vh' }} />
-                <SkillWrapper icon={ReactLogo} dimensions={{ height: '70%', width: '80%' }} />
-                <SkillWrapper icon={NodeLogo} dimensions={{ height: '60%', width: '80%' }} />
-                <SkillWrapper icon={AWSLogo} dimensions={{ height: '60%', width: '70%' }} />
-                <SkillWrapper icon={KubernetesLogo} dimensions={{ height: '80%', width: '80%' }} />
-              </div>
+                <SkillWrapper icon={figmaLogo} dimensions={{ height: '60%', width: 'auto' }} />
+                <SkillWrapper icon={css3Logo} dimensions={{ height: '65%', width: 'auto', marginTop: '0.25vh' }} />
+                <SkillWrapper icon={ReactLogo} dimensions={{ height: '60%', width: 'auto' }} />
+                
+                {/* Modified SkillWrapper for NodeJS */}
+                <SkillWrapper icon={NodeLogo} dimensions={{ height: '35%', width: 'auto', marginTop: '0.3vh'}} />
+                
+                {/* Modified SkillWrapper for AWS */}
+                <SkillWrapper icon={AWSLogo} dimensions={{ height: '35%', width: 'auto', marginTop: '0.5vh'}} />
+                
+                <SkillWrapper icon={KubernetesLogo} dimensions={{ height: '70%', width: 'auto' }} />
+            </div>
             </div>
             <div className="right-container">
             <div

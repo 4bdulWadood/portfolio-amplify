@@ -1,8 +1,8 @@
-import React, {useState, useEffect, useLayoutEffect} from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { useRef } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import {Howl} from 'howler';
+import { Howl } from "howler";
 
 export default function Navbar() {
   const [lottie, setLottie] = useState();
@@ -11,65 +11,79 @@ export default function Navbar() {
   const lottieRef = useRef(null);
   const soundRef = useRef();
 
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  const handleResize = () => {
+    setWindowHeight(window.innerHeight);
+  };
+
   useEffect(() => {
     import("lottie-web").then((Lottie) => setLottie(Lottie.default));
-  }, []);
 
-  let src = ["https://audio.jukehost.co.uk/Lqh5MwaPjKiwBRIsUIWjx9eNMnQ84mAz", "https://audio.jukehost.co.uk/TnXI1s4Rw0ZCaWF6StL2V9wvNXP43THX", "https://audio.jukehost.co.uk/7eemldfTwu8dKluBci9x7pEUArb315Ge"];
+    // Set initial window height
+    setWindowHeight(window.innerHeight);
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array means this effect runs once after the initial render
+
+
+  let src = [
+    "https://audio.jukehost.co.uk/Lqh5MwaPjKiwBRIsUIWjx9eNMnQ84mAz",
+    "https://audio.jukehost.co.uk/TnXI1s4Rw0ZCaWF6StL2V9wvNXP43THX",
+    "https://audio.jukehost.co.uk/7eemldfTwu8dKluBci9x7pEUArb315Ge",
+  ];
 
   const getRandomSong = () => src[Math.floor(Math.random() * src.length)];
 
-  
-  /*
-    'getRandomSong' is assigned an arrow function that returns a randomly selected element from the 'src' array. This approach is using a function because it allows for dynamic behavior - each time you call 'getRandomSong()', it will return a different random song from the 'src' array.
-    If you were to use a normal variable instead of a function then it's value would be set once when the page first renders and subsequence calls to that variable would always return the same value.
-  */
+  const playNextSong = () => {
+    soundRef.current = new Howl({
+      src: getRandomSong(),
+      format: ["mp3"],
+      onend: playNextSong,
+    });
+    soundRef.current.play();
+  };
 
-    const playNextSong = () => {
-      soundRef.current = new Howl({
-        src: getRandomSong(),
-        format: ['mp3'],
-        onend: playNextSong,
+  useLayoutEffect(() => {
+    soundRef.current = new Howl({
+      src: getRandomSong(),
+      format: ["mp3"],
+      onend: playNextSong,
+    });
+  }, []);
+
+  useEffect(() => {
+    if (lottie && lottieRef.current) {
+      const animation = lottie.loadAnimation({
+        container: lottieRef.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: play2,
+        animationData: require("../assets/audioButton.json"),
       });
-      soundRef.current.play();
-    };
-  
-    useLayoutEffect(() => {
-      soundRef.current = new Howl({
-        src: getRandomSong(),
-        format: ['mp3'],
-        onend: playNextSong,
-      });
-    }, []);
-  
-    useEffect(() => {
-      if (lottie && lottieRef.current) {
-        const animation = lottie.loadAnimation({
-          container: lottieRef.current,
-          renderer: "svg",
-          loop: true,
-          autoplay: play2,
-          animationData: require("../assets/audioButton.json")
-        });
-        return () => animation.destroy();
-      }
-    }, [lottie, play2]);
+      return () => animation.destroy();
+    }
+  }, [lottie, play2]);
 
   const handleClick = (type) => {
-    if(type==="main"){
-      window.scrollTo(0, 0);
-    }
-    if(type==="projects"){
-      window.scrollTo(0, 1400);
-    }
-
-
     switch (type) {
-      case "projects":
-        window.scrollTo(0, 1390);
+      case "main":
+        window.scrollTo(0, 0);
         break;
       case "aboutme":
-        window.scrollTo(0, 800);
+        window.scrollTo(0, windowHeight/0.90);
+        break;
+      case "project1": 
+        window.scrollTo(0, windowHeight/0.52); 
+        break;
+      case "project2": 
+        window.scrollTo(0, windowHeight/0.30);
         break;
       default:
         window.scrollTo(0, 0);
@@ -85,43 +99,68 @@ export default function Navbar() {
     !play2 ? soundRef.current.play() : soundRef.current.pause();
   };
 
-  
   const navRef = useRef();
 
-	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsive_nav"
-		);
-	};
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
 
-	return (
-		<header>
-			<a>
-        <div className="nav-logo"><img src={require("../assets/logo.png")} alt="not found"/></div>
+  return (
+    <header>
+      <a>
+        <div className="nav-logo">
+          <img src={require("../assets/logo.png")} alt="not found" />
+        </div>
       </a>
-			<nav ref={navRef}>
-				<a href="/#main" style={{width: "3.4rem"}} onClick={e=>{handleClick("main")}} className={`animated-underline ${isClicked==="main" ? 'clicked' : ''}`}>Home</a>
-				<a href="/#aboutme" style={{width: "6.6rem"}} onClick={e=>{handleClick("aboutme")}} className={`animated-underline ${isClicked==="aboutme" ? 'clicked' : ''}`}>About me</a>
-				<a href="/#projects" style={{width: "4.4rem"}} onClick={e=>{handleClick("projects")}} className={`animated-underline ${isClicked==="projects" ? 'clicked' : ''}`}>Projects</a>
-				<a href="/#contact" style={{width: "7.5rem"}} onClick={e=>{handleClick("contact")}} className={`animated-underline ${isClicked==="contact" ? 'clicked' : ''}`}>Contact me</a>
-        <div
-            ref={lottieRef}
-            onClick={e=>{handlePlay()}}
-            className="audio-icon"
-        ></div>
-        
-        <button
-					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
-					<FontAwesomeIcon style={{marginLeft: "0.5vw" }} icon={faBars} fontSize={25} color="#7600AD"/>
-				</button>
-			</nav>
-			<button
-				className="nav-btn"
-				onClick={showNavbar}>
-				<FontAwesomeIcon style={{marginLeft: "0.5vw"}} icon={faBars} fontSize={25} color="#7600AD"/>
-			</button>
-		</header>
-	);
+      <nav ref={navRef}>
+        <a
+          href="/#main"
+          style={{ width: "3.25rem" }}
+          onClick={(e) => {
+            handleClick("main");
+          }}
+          className={`animated-underline ${isClicked === "main" ? "clicked" : ""}`}
+        >
+          Home
+        </a>
+        <a
+          href="/#aboutme"
+          style={{ width: "5.25rem" }}
+          onClick={(e) => {
+            handleClick("aboutme");
+          }}
+          className={`animated-underline ${isClicked === "aboutme" ? "clicked" : ""}`}
+        >
+          About me
+        </a>
+        <a
+          href="/#projects"
+          style={{ width: "3.8rem" }}
+          onClick={(e) => {
+            handleClick("project1");
+          }}
+          className={`animated-underline ${isClicked === "project1" ? "clicked" : ""}`}
+        >
+          Project
+        </a>
+        <a
+          href="/#contact"
+          style={{ width: "6rem" }}
+          onClick={(e) => {
+            handleClick("contact");
+          }}
+          className={`animated-underline ${isClicked === "contact" ? "clicked" : ""}`}
+        >
+          Contact me
+        </a>
+        <div ref={lottieRef} onClick={(e) => { handlePlay() }} className="audio-icon"></div>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FontAwesomeIcon style={{ marginLeft: "0.5vw" }} icon={faBars} fontSize={25} color="#7600AD" />
+        </button>
+      </nav>
+      <button className="nav-btn" onClick={showNavbar}>
+        <FontAwesomeIcon style={{ marginLeft: "0.5vw" }} icon={faBars} fontSize={25} color="#7600AD" />
+      </button>
+    </header>
+  );
 }
-

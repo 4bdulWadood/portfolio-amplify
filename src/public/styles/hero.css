@@ -51,6 +51,7 @@
 @media only screen and (max-width: 1000px) {
   .section-main .main-page-container .left-container .title {
     font-size: 4em;
+    width: 50%;
   }
 }
 
@@ -96,7 +97,7 @@
 
 @media only screen and (max-width: 768px) {
   .section-main .main-page-container .left-container .description {
-    font-size: 1.6em;
+    font-size: 2em;
   }
 }
 .section-main .main-page-container .left-container .social-ico {
@@ -213,4 +214,4 @@
   height: 15em;
   position: absolute;
   border-radius: 120px;
-}/*# sourceMappingURL=hero.css.map */
+}

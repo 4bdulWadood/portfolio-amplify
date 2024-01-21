@@ -15,8 +15,9 @@ header {
 
 .audio-icon {
 	display: flex;
-	height: 4rem;
-	margin-right: 2rem;
+	height: 3rem;
+	margin-left: -3rem;
+	width: 8rem;
 }
 
 nav a {
@@ -106,6 +107,13 @@ nav {
 		opacity: 1;
 		margin-right: 10%;
 		margin-top: 0.5rem;;
+	}
+
+	.audio-icon {
+		display: flex;
+		height: 3rem;
+		margin-left: -2rem;
+		width: 8rem;
 	}
 
   nav a {
