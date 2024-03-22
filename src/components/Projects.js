@@ -75,6 +75,11 @@ export default function Projects() {
       name: "IBM - watsonx.ai",
       text: "IBM WatsonX is IBM's commercial generative AI and scientific data platform based on the cloud.",
       goTo: "https://en.wikipedia.org/wiki/IBM_Watsonx"
+    },
+    {
+      name: "DeskSynergy",
+      text: "DeskSynergy integrates room temperature control, project tracking, and meeting room bookings into one platform for enhanced workplace efficiency.",
+      goTo: "https://docs.google.com/document/d/1uZbmDVLqCb8FDmRxZIdlWywzlvmDPpz_/edit"
     }
   ]
   
@@ -85,6 +90,7 @@ export default function Projects() {
         <ProjectCard ProjectData={ProjectData[0]}/>
         <ProjectCard ProjectData={ProjectData[1]}/>
         <ProjectCard ProjectData={ProjectData[2]}/>
+        <ProjectCard ProjectData={ProjectData[5]}/>
     </div>
   );
 }

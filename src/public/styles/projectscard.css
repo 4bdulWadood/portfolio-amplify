@@ -43,6 +43,10 @@
     background-image: url('../../assets/lab2client.jpg'); /* Path to your image */
 }
 
+.DeskSynergy {
+    background-image: url('../../assets/DeskSynergy.png');
+}
+
 .IEEE {
     background-image: url('../../assets/TMUIEEE.jpg');
 }

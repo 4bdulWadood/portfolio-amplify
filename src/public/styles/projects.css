@@ -1,6 +1,6 @@
 .Cards {
   display: flex;
-  justify-content: space-around;
+  justify-content:  center;
   align-items: center;
   height: 150%;
   margin: 8vh 20vw;
@@ -9,6 +9,7 @@
 
 .Cards .Card {
   margin-bottom: 30px;
+  margin-left: 100px;
 }
 
 @media (max-width: 800px) {
