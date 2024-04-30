@@ -61,7 +61,7 @@ export default function Projects() {
       logo2: links[4],
       logo3: links[2],
       text: "The Andie app offers real-time traffic and trial solutions to help businesses reach nearby customers.",
-      goTo: "https://www.get.alwaysandie.com/"
+      goTo: "https://andie.work"
     }, 
     {
       name: "Lab2Client",
@@ -79,7 +79,7 @@ export default function Projects() {
     {
       name: "DeskSynergy",
       text: "DeskSynergy integrates room temperature control, project tracking, and meeting room bookings into one platform for enhanced workplace efficiency.",
-      goTo: "https://docs.google.com/document/d/1uZbmDVLqCb8FDmRxZIdlWywzlvmDPpz_/edit"
+      goTo: "https://docs.google.com/document/d/1JasTNzLkihKSsUyJaEHQSfDIeAQku6yd/edit"
     }
   ]
   
